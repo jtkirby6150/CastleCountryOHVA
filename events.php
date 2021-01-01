@@ -23,7 +23,7 @@ include "mainincludes/nav.php";
                     echo "<div class='photo-card' style='margin: 25px auto 50px;box-shadow: 0px 0px 10px 5px #af6b58; color: white'>
                     <div class='photo-background' style='background: url(assets/img/events/$image) center / cover no-repeat;'></div>
                     <div class='photo-details' style='border-color: #556052;'><h1><b>$title</b> </h1>
-                    <b>Date: </b>" . date("m/d/Y", $date) . "<br>
+                    <b>Date: </b>" . date("m/d/Y", strtotime($date)) . "<br>
                     <b>Time: </b>". date("H:i A",strtotime($time)) . "<br>
                     <b>Location: </b>$loc <br>
                     <b>GPS: </b>" . clean($gps) . "<br>
