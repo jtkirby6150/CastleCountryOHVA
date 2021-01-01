@@ -25,7 +25,7 @@ include "mainincludes/nav.php";
                         echo "</div>                        
                             <div class='card-body' style='background: #556052;color: #f2efea;'>
                                 <h3 class='card-title' style='font-family: Antic, sans-serif;color: #f2efea;'>$title</h3>
-                                <h5 class='card-sub-title' style='font-family: Antic, sans-serif;color: #f2efea;'>$date</h5>
+                                <h5 class='card-sub-title' style='font-family: Antic, sans-serif;color: #f2efea;'>" . date("m-d-Y",strtotime($date)) . "</h5>
                                 <p class='card-text' style='font-family: Antic, sans-serif;color: #f2efea;font-size: 14px;'>
                                 <br>$description<br><br></p>
                             </div>
