@@ -26,7 +26,7 @@ include "mainincludes/nav.php";
                     <b>Date: </b>" . date("m/d/Y", $date) . "<br>
                     <b>Time: </b>". date("H:i A",strtotime($time)) . "<br>
                     <b>Location: </b>$loc <br>
-                    <b>GPS: </b>$gps <br>
+                    <b>GPS: </b>" . clean($gps) . "<br>
                     <b>Difficulty: </b>$difficulty <br>
                     <b>Duration: </b>$duration <br>
                     <b>Ride Description: </b><br>
