@@ -277,3 +277,4 @@ Stack trace:
 [17-Dec-2020 21:43:25 America/Denver] PHP Notice:  Undefined index: from in /home/ix4wmjzt9fz0/public_html/contactus.php on line 19
 [18-Dec-2020 13:07:20 America/Denver] PHP Notice:  Undefined variable: name in /home/ix4wmjzt9fz0/public_html/mainincludes/nav.php on line 49
 [18-Dec-2020 13:10:17 America/Denver] PHP Notice:  Undefined variable: name in /home/ix4wmjzt9fz0/public_html/mainincludes/nav.php on line 49
+[01-Jan-2021 02:45:50 America/Denver] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, bool given in /home/ix4wmjzt9fz0/public_html/resources/functions.php on line 11
