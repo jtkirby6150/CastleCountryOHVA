@@ -10,7 +10,7 @@ include "mainincludes/nav.php";
 
 
                     <?php
-                    $getNews = query("SELECT * FROM news WHERE archive = 0 ORDER BY id");
+                    $getNews = query("SELECT * FROM news WHERE archive = 0 ORDER BY id DESC");
                     while($row = fetch_array($getNews)){
                         $title = $row['title'];
                         $date = $row['date'];
