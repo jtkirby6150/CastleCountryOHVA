@@ -349,7 +349,7 @@ if(!isset($_SESSION['username'])){
 
                         echo "<div class='row'>
                         <div class='col col-md-12 mb-5' style='padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;box-shadow: 0px 0px 10px 5px #af6b58;'>
-                        <div class='bg-light border rounded shadow card' data-bs-hover-animate='pulse' style='background: #556052;color: #f2efea;'>
+                        <div class='bg-light border rounded shadow card' style='background: #556052;color: #f2efea;'>
                         <div class='text-center'>"; displayAdminNewsImages($newsImage);
                         echo "</div>                        
                             <div class='card-body' style='background: #556052;color: #f2efea;'>
