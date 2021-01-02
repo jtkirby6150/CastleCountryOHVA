@@ -18,7 +18,7 @@ if(isset($_POST['contactUs'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $subject = "New Contact Us submission from: $name";
-    $headers = "From: noreply@castlecountryOHVA.org";
+    $headers = "From: $email";
     $msg = "New message from: \r\n Name: $name  \r\n Phone: $phone  \r\n Email: $email  \r\n Message: " . $_POST['message'];
     mail($to, $subject, $msg, $headers);
     set_message("Thank you for your message, we will get back to you shortly.", "success");
