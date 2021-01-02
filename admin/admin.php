@@ -53,7 +53,7 @@ if(!isset($_SESSION['username'])){
     <div class="container">
         <div>
             <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-1" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Active Members</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-1" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Members & Swag</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-2" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Events</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-17" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Other Events</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-3" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">News</a></li>
@@ -72,6 +72,7 @@ if(!isset($_SESSION['username'])){
                             <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-9" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Active</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-10" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Inactive</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-11" style="background: #af6b58;color: #f2efea;border-color: #556052;">All Members</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-100" style="background: #af6b58;color: #f2efea;border-color: #556052;">Swag</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" role="tabpanel" id="tab-9">
@@ -163,6 +164,55 @@ if(!isset($_SESSION['username'])){
                                     </table>
                                 </div>
                             </div>
+
+                            <div class="tab-pane active" role="tabpanel" id="tab-100">
+                                <p>SWAG</p>
+                                <div><button class="btn btn-primary" type="button">Add Swag</button></div>
+                                <section>
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>Image/Title</th>
+                                                <th>Short Description</th>
+                                                <th>Qty</th>
+                                                <th>Price</th>
+                                                <th>Active?</th>
+                                                <th>Edit / Set Active / Delete</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <p>TITLE OF PRODUCT</p><img src="/assets/img/122532219_3394763900749660_2608346714282335828_n.jpg" style="height: 200px;">
+                                                </td>
+                                                <td>
+                                                    <p>fdjsakj; df js;kjdfs ai;jdfsaidfsjh dfjkasj;fda jfkdas;jf zksajdsz <br>fddfsaj fdkjkaj;fd ka;jfkj ;djfasjldjf ;fdjsa fdajsdfjkl;fdjsa</p>
+                                                </td>
+                                                <td>
+                                                    <p>10</p>
+                                                </td>
+                                                <td>
+                                                    <p>$15.99</p>
+                                                </td>
+                                                <td>
+                                                    <p>Active</p>
+                                                </td>
+                                                <td class="text-center">
+                                                    <p><i class="fa fa-pencil" style="font-size: 30px;color: var(--success);"></i><br><i class="fa fa-check" style="margin: 0 15px;font-size: 30px;color: var(--blue);"></i><br><i class="fa fa-remove" style="margin: 0 15px;font-size: 30px;color: rgb(235,142,33);"></i><br><i class="fa fa-trash" style="font-size: 30px;color: var(--danger);"></i></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cell 3</td>
+                                                <td>Cell 4</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </section>
+                            </div>
+
+
                         </div>
                 </div>
                 </div>
