@@ -31,6 +31,9 @@ if(!isset($_SESSION['username'])){
                 </thead>
                 <tbody>
                 <?php
+
+
+
                 $getBoard = query("SELECT * FROM board ORDER BY name");
                 while($bmrow = fetch_array($getBoard)) {
                     $id = $bmrow['id'];
@@ -45,6 +48,13 @@ if(!isset($_SESSION['username'])){
                         <td>$boardemail</td>
                     </tr>";
                 }
+                //webmaster detail
+                echo "<tr>
+                        <td>Kirby</td>
+                        <td>Web Master</td>
+                        <td>(801) 879-0378</td>
+                        <td>james.t.kirby@gmail.com</td>
+                    </tr>";
                 ?>
                 </tbody>
             </table>
@@ -165,7 +175,7 @@ if(!isset($_SESSION['username'])){
                                 </div>
                             </div>
 
-                            <div class="tab-pane active" role="tabpanel" id="tab-100">
+                            <div class="tab-pane" role="tabpanel" id="tab-100">
                                 <p>SWAG</p>
                                 <div><button class="btn btn-primary" type="button">Add Swag</button></div>
                                 <section>
