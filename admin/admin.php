@@ -561,52 +561,7 @@ if(!isset($_SESSION['username'])){
             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-20" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Archived Events.</a></li>
         </ul>
         <div class="tab-content">
-            <div class="tab-pane active" role="tabpanel" id="tab-18">
-                <h4>Other Events</h4>
-                <?php
-                $sql = query("SELECT * FROM otherevents WHERE archive = 0 ORDER BY id");
-                while($row = fetch_array($sql)){
-                    $id = $row['id'];
-                    $title = $row['title'];
-                    $date = $row['date'];
-                    $time = $row['time'];
-                    $loc = $row['location'];
-                    $gps = $row['gps'];
-                    $difficulty = $row['difficulty'];
-                    $duration = $row['duration'];
-                    $description = $row['description'];
-                    $image = $row['image'];
 
-                    if(!$gps){
-                        $gps = "N/A";
-                    }
-                    if(!$difficulty){
-                        $difficulty = "N/A";
-                    }
-
-
-                    echo "<div class='photo-card' style='margin: 25px auto 50px;box-shadow: 0px 0px 10px 5px #af6b58; color: white'>
-                            <div class='photo-background' style='background: url(../assets/img/otherevents/$image) center / cover no-repeat;'></div>
-                            <div class='photo-details' style='border-color: #556052;'><h1><b>$title</b> </h1>
-                                <b>Date: </b>" . date("m/d/Y",strtotime($date)) . "<br>
-                                <b>Time: </b>". date("H:i A",strtotime($time)) . "<br>
-                                <b>Location: </b>$loc <br>
-                                <b>GPS: </b>$gps <br>
-                                <b>Difficulty: </b>$difficulty <br>
-                                <b>Duration: </b>$duration <br>
-                                <b>Ride Description: </b><br>
-                                $description<br><br></p>  
-                            <div class='photo-tags' style='text-align: center;'>
-                                <a href='otherevents.php?edit=$id;' class='btn mb-2' data-bs-hover-animate='pulse' type='button' style='color: #1c1c1c;background: green;'><strong>Edit</strong></a>
-                                <a href='adminarchiveother.php?archive=$id' class='btn mb-2' data-bs-hover-animate='pulse' type='button' style='color: #1c1c1c;background: #af6b58;'><strong>Archive</strong></a>
-                                <a href='delete.php?otherevent=$id' onclick='checkDelete()' class='btn' data-bs-hover-animate='pulse' type='button' style='color: white;background: red;'><strong>Delete</strong></a>
-                            </div>
-                            </div>
-                        </div>";
-                }
-                ?>
-            </div>
-        </div>
             <div class="tab-pane" role="tabpanel" id="tab-19">
                 <h4>Archives</h4>
                 <?php
