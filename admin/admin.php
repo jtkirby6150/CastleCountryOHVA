@@ -550,7 +550,9 @@ if(!isset($_SESSION['username'])){
 
     <div class="tab-pane" role="tabpanel" id="tab-17">
         <p>Other Events</p>
-        <div style="text-align: center;"><a href="otherevents.php" class="btn" data-bs-hover-animate="pulse" type="button" style="color: #f2efea;background: #af6b58;text-align: center;">Add New Event</a></div>
+        <div style="text-align: center;">
+            <a href="otherevents.php" class="btn" data-bs-hover-animate="pulse" type="button" style="color: #f2efea;background: #af6b58;text-align: center;">Add New Event</a>
+        </div>
     </div>
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item" role="presentation">
@@ -593,7 +595,8 @@ if(!isset($_SESSION['username'])){
                                 <b>Difficulty: </b>$difficulty <br>
                                 <b>Duration: </b>$duration <br>
                                 <b>Ride Description: </b><br>
-                                $description<br><br></p>  <div class='photo-tags' style='text-align: center;'>
+                                $description<br><br></p>  
+                            <div class='photo-tags' style='text-align: center;'>
                                 <a href='otherevents.php?edit=$id;' class='btn mb-2' data-bs-hover-animate='pulse' type='button' style='color: #1c1c1c;background: green;'><strong>Edit</strong></a>
                                 <a href='adminarchiveother.php?archive=$id' class='btn mb-2' data-bs-hover-animate='pulse' type='button' style='color: #1c1c1c;background: #af6b58;'><strong>Archive</strong></a>
                                 <a href='delete.php?otherevent=$id' onclick='checkDelete()' class='btn' data-bs-hover-animate='pulse' type='button' style='color: white;background: red;'><strong>Delete</strong></a>
@@ -603,6 +606,7 @@ if(!isset($_SESSION['username'])){
                 }
                 ?>
             </div>
+        </div>
             <div class="tab-pane" role="tabpanel" id="tab-19">
                 <h4>Archives</h4>
                 <?php
