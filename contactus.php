@@ -53,6 +53,7 @@ if(isset($_POST['contactUs'])){
                 <select class="form-control" name="to" id="" required>
                     <option value="">Please select an option</option>
                     <option value="ccohva@gmail.com">General Questions</option>
+                    <option value="james.t.kirby@gmail.com">Web Master</option>
                     <?php
                     //retrieves a list of current board members to display in the dropdown contact us area.
                     $getBoardList = query("SELECT * FROM board ORDER BY name");
