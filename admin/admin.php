@@ -31,9 +31,6 @@ if(!isset($_SESSION['username'])){
                 </thead>
                 <tbody>
                 <?php
-
-
-
                 $getBoard = query("SELECT * FROM board ORDER BY name");
                 while($bmrow = fetch_array($getBoard)) {
                     $id = $bmrow['id'];
@@ -48,13 +45,6 @@ if(!isset($_SESSION['username'])){
                         <td>$boardemail</td>
                     </tr>";
                 }
-                //webmaster detail
-                echo "<tr>
-                        <td>Kirby</td>
-                        <td>Web Master</td>
-                        <td>(801) 879-0378</td>
-                        <td>james.t.kirby@gmail.com</td>
-                    </tr>";
                 ?>
                 </tbody>
             </table>
@@ -63,7 +53,7 @@ if(!isset($_SESSION['username'])){
     <div class="container">
         <div>
             <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-1" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Members & Swag</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-1" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Active Members</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-2" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Events</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-17" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Other Events</a></li>
                 <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-3" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">News</a></li>
@@ -82,7 +72,6 @@ if(!isset($_SESSION['username'])){
                             <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-9" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Active</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-10" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Inactive</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-11" style="background: #af6b58;color: #f2efea;border-color: #556052;">All Members</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-100" style="background: #af6b58;color: #f2efea;border-color: #556052;">Swag</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" role="tabpanel" id="tab-9">
@@ -174,55 +163,6 @@ if(!isset($_SESSION['username'])){
                                     </table>
                                 </div>
                             </div>
-
-                            <div class="tab-pane" role="tabpanel" id="tab-100">
-                                <p>SWAG</p>
-                                <div><button class="btn btn-primary" type="button">Add Swag</button></div>
-                                <section>
-                                    <div class="table-responsive">
-                                        <table class="table">
-                                            <thead>
-                                            <tr>
-                                                <th>Image/Title</th>
-                                                <th>Short Description</th>
-                                                <th>Qty</th>
-                                                <th>Price</th>
-                                                <th>Active?</th>
-                                                <th>Edit / Set Active / Delete</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td style="text-align: center;">
-                                                    <p>TITLE OF PRODUCT</p><img src="/assets/img/122532219_3394763900749660_2608346714282335828_n.jpg" style="height: 200px;">
-                                                </td>
-                                                <td>
-                                                    <p>fdjsakj; df js;kjdfs ai;jdfsaidfsjh dfjkasj;fda jfkdas;jf zksajdsz <br>fddfsaj fdkjkaj;fd ka;jfkj ;djfasjldjf ;fdjsa fdajsdfjkl;fdjsa</p>
-                                                </td>
-                                                <td>
-                                                    <p>10</p>
-                                                </td>
-                                                <td>
-                                                    <p>$15.99</p>
-                                                </td>
-                                                <td>
-                                                    <p>Active</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p><i class="fa fa-pencil" style="font-size: 30px;color: var(--success);"></i><br><i class="fa fa-check" style="margin: 0 15px;font-size: 30px;color: var(--blue);"></i><br><i class="fa fa-remove" style="margin: 0 15px;font-size: 30px;color: rgb(235,142,33);"></i><br><i class="fa fa-trash" style="font-size: 30px;color: var(--danger);"></i></p>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </section>
-                            </div>
-
-
                         </div>
                 </div>
                 </div>
@@ -409,7 +349,7 @@ if(!isset($_SESSION['username'])){
 
                         echo "<div class='row'>
                         <div class='col col-md-12 mb-5' style='padding-top: 15px;padding-bottom: 15px;padding-right: 15px;padding-left: 15px;box-shadow: 0px 0px 10px 5px #af6b58;'>
-                        <div class='bg-light border rounded shadow card' style='background: #556052;color: #f2efea;'>
+                        <div class='bg-light border rounded shadow card' data-bs-hover-animate='pulse' style='background: #556052;color: #f2efea;'>
                         <div class='text-center'>"; displayAdminNewsImages($newsImage);
                         echo "</div>                        
                             <div class='card-body' style='background: #556052;color: #f2efea;'>
@@ -610,9 +550,8 @@ if(!isset($_SESSION['username'])){
 
     <div class="tab-pane" role="tabpanel" id="tab-17">
         <p>Other Events</p>
-        <div style="text-align: center;">
-            <a href="otherevents.php" class="btn" data-bs-hover-animate="pulse" type="button" style="color: #f2efea;background: #af6b58;text-align: center;">Add New Event</a>
-        </div>
+        <div style="text-align: center;"><a href="otherevents.php" class="btn" data-bs-hover-animate="pulse" type="button" style="color: #f2efea;background: #af6b58;text-align: center;">Add New Event</a></div>
+    </div>
         <ul class="nav nav-tabs" role="tablist">
             <li class="nav-item" role="presentation">
                 <a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-18" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Other Events</a></li>
@@ -654,8 +593,7 @@ if(!isset($_SESSION['username'])){
                                 <b>Difficulty: </b>$difficulty <br>
                                 <b>Duration: </b>$duration <br>
                                 <b>Ride Description: </b><br>
-                                $description<br><br></p>  
-                            <div class='photo-tags' style='text-align: center;'>
+                                $description<br><br></p>  <div class='photo-tags' style='text-align: center;'>
                                 <a href='otherevents.php?edit=$id;' class='btn mb-2' data-bs-hover-animate='pulse' type='button' style='color: #1c1c1c;background: green;'><strong>Edit</strong></a>
                                 <a href='adminarchiveother.php?archive=$id' class='btn mb-2' data-bs-hover-animate='pulse' type='button' style='color: #1c1c1c;background: #af6b58;'><strong>Archive</strong></a>
                                 <a href='delete.php?otherevent=$id' onclick='checkDelete()' class='btn' data-bs-hover-animate='pulse' type='button' style='color: white;background: red;'><strong>Delete</strong></a>
@@ -711,21 +649,21 @@ if(!isset($_SESSION['username'])){
                                 <h1 style='text-align: center;font-family: Alex Brush, cursive;font-size: 50px;padding-top: 20px;'>$title</h1>
                             <div class='col-md-12 mb-3 p-2'>
                             <div class='form-row photos'>";
-                    displayArchiveImages($image1);
-                    displayArchiveImages($image2);
-                    displayArchiveImages($image3);
-                    displayArchiveImages($image4);
-                    displayArchiveImages($image5);
-                    displayArchiveImages($image6);
-                    displayArchiveImages($image7);
-                    displayArchiveImages($image8);
-                    displayArchiveImages($image9);
-                    displayArchiveImages($image10);
-                    displayArchiveImages($image11);
-                    displayArchiveImages($image12);
-                    displayArchiveImages($image13);
-                    displayArchiveImages($image14);
-                    displayArchiveImages($image15);
+                                displayArchiveImages($image1);
+                                displayArchiveImages($image2);
+                                displayArchiveImages($image3);
+                                displayArchiveImages($image4);
+                                displayArchiveImages($image5);
+                                displayArchiveImages($image6);
+                                displayArchiveImages($image7);
+                                displayArchiveImages($image8);
+                                displayArchiveImages($image9);
+                                displayArchiveImages($image10);
+                                displayArchiveImages($image11);
+                                displayArchiveImages($image12);
+                                displayArchiveImages($image13);
+                                displayArchiveImages($image14);
+                                displayArchiveImages($image15);
 
                     echo "<hr style='border-style: dotted;border-top-width: 3px;border-top-color: rgb(85,96,82);width: 80%;' class='mb-5'>
                             </div>
@@ -793,9 +731,6 @@ if(!isset($_SESSION['username'])){
                 ?>
             </div>
         </div>
-    </div>
-
-
 
 
             

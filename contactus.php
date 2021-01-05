@@ -18,7 +18,7 @@ if(isset($_POST['contactUs'])){
     $phone = $_POST['phone'];
     $email = $_POST['email'];
     $subject = "New Contact Us submission from: $name";
-    $headers = "From: $email";
+    $headers = "From: noreply@castlecountryOHVA.org";
     $msg = "New message from: \r\n Name: $name  \r\n Phone: $phone  \r\n Email: $email  \r\n Message: " . $_POST['message'];
     mail($to, $subject, $msg, $headers);
     set_message("Thank you for your message, we will get back to you shortly.", "success");
@@ -53,7 +53,6 @@ if(isset($_POST['contactUs'])){
                 <select class="form-control" name="to" id="" required>
                     <option value="">Please select an option</option>
                     <option value="ccohva@gmail.com">General Questions</option>
-                    <option value="james.t.kirby@gmail.com">Kirby ~ Web Master</option>
                     <?php
                     //retrieves a list of current board members to display in the dropdown contact us area.
                     $getBoardList = query("SELECT * FROM board ORDER BY name");
