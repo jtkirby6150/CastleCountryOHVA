@@ -142,6 +142,12 @@ function displayAdminNewsImages($img)
 }
 
 
+function clean($string)
+{
+    return htmlentities($string);
+}
+
+
 
 
 
