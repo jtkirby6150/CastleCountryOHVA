@@ -35,8 +35,7 @@ if(isset($_POST['submitRegistration'])){
     $signature = escape($_POST['signature']);
     $date = escape($_POST['date']);
 
-    genPDF();
-
+javascript:genPDF();
 //    $addMember = query("INSERT INTO members (member, newsletter, name, phone, emial, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter', '$name', '$phone', '$email', '$address', '$pobox', '$city', '$state', '$zip', '$help', '$accept', '$signature', '$date', 0)");
 //    confirm($addMember);
 //    set_message("YOU GOT IT");
