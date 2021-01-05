@@ -212,10 +212,6 @@ if(!isset($_SESSION['username'])){
                                                     <p><i class="fa fa-pencil" style="font-size: 30px;color: var(--success);"></i><br><i class="fa fa-check" style="margin: 0 15px;font-size: 30px;color: var(--blue);"></i><br><i class="fa fa-remove" style="margin: 0 15px;font-size: 30px;color: rgb(235,142,33);"></i><br><i class="fa fa-trash" style="font-size: 30px;color: var(--danger);"></i></p>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                            </tr>
                                             </tbody>
                                         </table>
                                     </div>
