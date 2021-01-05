@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="assets/css/News-Cards.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" href="assets/img/favicon.ico">
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5PDEGYG0VR"></script>
 <script>
