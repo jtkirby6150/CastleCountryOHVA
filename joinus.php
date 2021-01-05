@@ -8,9 +8,11 @@ include "mainincludes/nav.php";
 <script type="text/javascript" src="html2canvas.js"></script>
 <script>
     function genPDF() {
-        html2canvas('document.body', {
+        html2canvas('document.getElementById("mainForm")', {
             onrendered: function (canvas) {
+                var img = canvas.toDataURL("image/png");
                 var doc = new jsPDF();
+                doc.addImage(img, 'JPEG', 20,20)
                 doc.save("CCHOVA_RegistrationForm.pdf");
             }
         });
