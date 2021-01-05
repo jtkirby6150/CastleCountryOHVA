@@ -38,18 +38,18 @@ if(isset($_POST['submitRegistration'])){
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="member">New Member or Renewal?</label><br>
-                            <input type="radio" name="newsletter" autofocus tabindex="1" id="newOrRenew" value="new" required>
+                            <input type="radio" name="newsletter" autofocus tabindex="1" id="newsletter" value="new" required>
                             <label for="new">New</label>
-                            <input class="ml-2" type="radio" name="newOrRenew" id="newOrRenew" tabindex="2" value="renew" required>
+                            <input class="ml-2" type="radio" name="newsletter" id="newsletter" tabindex="2" value="renew" required>
                             <label for="renew">Renewal</label>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="newsletter">How would you like your newsletter?</label><br>
-                            <input type="radio" name="member" id="mailOrEmail" tabindex="3" value="mail"required>
+                            <input type="radio" name="member" id="member" tabindex="3" value="mail"required>
                             <label for="mailOrEmail">Mail</label>
-                            <input class="ml-2" type="radio" name="mailOrEmail" tabindex="4" id="mailOrEmail" value="email" required>
+                            <input class="ml-2" type="radio" name="member" tabindex="4" id="member" value="email" required>
                             <label for="email">Email</label>
                         </div>
                     </div>
