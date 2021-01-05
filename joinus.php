@@ -4,6 +4,8 @@ include "mainincludes/init.php";
 include "mainincludes/nav.php";
 
 ?>
+<script type="text/javascript" src="jspdf.min.js"></script>
+<script type="text/javascript" src="html2canvas.js"></script>
 <script>
     function genPDF() {
         html2canvas('#mainForm', {
@@ -35,7 +37,7 @@ if(isset($_POST['submitRegistration'])){
     $signature = escape($_POST['signature']);
     $date = escape($_POST['date']);
 
-javascript:genPDF();
+
 //    $addMember = query("INSERT INTO members (member, newsletter, name, phone, emial, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter', '$name', '$phone', '$email', '$address', '$pobox', '$city', '$state', '$zip', '$help', '$accept', '$signature', '$date', 0)");
 //    confirm($addMember);
 //    set_message("YOU GOT IT");
@@ -182,7 +184,7 @@ javascript:genPDF();
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <button name="submitRegistration" class='btn' data-bs-hover-animate='pulse' type='submit' style='color: #1c1c1c;background: #af6b58;'><strong>Submit</strong></button>
+                        <a href="javascript:genPDF()" name="submitRegistration" class='btn' data-bs-hover-animate='pulse' type='submit' style='color: #1c1c1c;background: #af6b58;'><strong>Submit</strong></a>
                     </div>
                 </div>
             </form>
