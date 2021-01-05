@@ -3,6 +3,20 @@ include "mainincludes/header.php";
 include "mainincludes/init.php";
 include "mainincludes/nav.php";
 
+?>
+<script>
+    function genPDF() {
+        html2canvas('#mainForm', {
+            onrendered: function (canvas) {
+                var doc = new jsPDF();
+                doc.save("CCHOVA_RegistrationForm.pdf");
+            }
+        });
+    }
+</script>
+<?php
+
+
 require_once "resources/functions.php";
 
 if(isset($_POST['submitRegistration'])){
@@ -20,6 +34,8 @@ if(isset($_POST['submitRegistration'])){
     $accept = escape($_POST['accept']);
     $signature = escape($_POST['signature']);
     $date = escape($_POST['date']);
+
+    genPDF();
 
 //    $addMember = query("INSERT INTO members (member, newsletter, name, phone, emial, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter', '$name', '$phone', '$email', '$address', '$pobox', '$city', '$state', '$zip', '$help', '$accept', '$signature', '$date', 0)");
 //    confirm($addMember);
