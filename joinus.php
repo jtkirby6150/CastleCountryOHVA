@@ -186,7 +186,7 @@ if(isset($_POST['submitRegistration'])){
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <a href="javascript:genPDF()" name="submitRegistration" class='btn' data-bs-hover-animate='pulse' type='submit' style='color: #1c1c1c;background: #af6b58;'><strong>Submit</strong></a>
+                        <a href="javascript : genPDF()" name="submitRegistration" class='btn' data-bs-hover-animate='pulse' type='submit' style='color: #1c1c1c;background: #af6b58;'><strong>Submit</strong></a>
                     </div>
                 </div>
             </form>
