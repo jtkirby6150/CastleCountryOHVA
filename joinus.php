@@ -50,7 +50,7 @@ if(isset($_POST['submitRegistration'])){
         <p style="text-align: center;" class='mb-5'>Please join us by filling out the form below or sending in this <a class="btn btn-secondary" href="assets/2021-Membership-Application.pdf" download="">downloadable</a> form.</p>
 
         <section id="mainForm" style="border: solid">
-            <form method="post" action="makepdf.php" class="p-4" enctype="multipart/form-data">
+            <form method="post" action="" class="p-4" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-md-2"><img src="assets/img/logo-dark.png" height="100px"></div>
                     <div class="col-md-8"><h1 class="text-center">Castle Country OHV Association</h1></div>
