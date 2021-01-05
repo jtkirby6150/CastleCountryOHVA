@@ -6,18 +6,6 @@ include "mainincludes/nav.php";
 ?>
 <script type="text/javascript" src="jspdf.min.js"></script>
 <script type="text/javascript" src="html2canvas.js"></script>
-<script>
-    function genPDF() {
-        html2canvas('document.getElementById("mainForm")', {
-            onrendered: function (canvas) {
-                var img = canvas.toDataURL("image/png");
-                var doc = new jsPDF();
-                doc.addImage(img, 'JPEG', 20,20)
-                doc.save("CCHOVA_RegistrationForm.pdf");
-            }
-        });
-    }
-</script>
 <?php
 
 
@@ -186,7 +174,7 @@ if(isset($_POST['submitRegistration'])){
                 </div>
                 <div class="row">
                     <div class="col text-center">
-                        <a href="javascript : genPDF()" name="submitRegistration" class='btn' data-bs-hover-animate='pulse' type='submit' style='color: #1c1c1c;background: #af6b58;'><strong>Submit</strong></a>
+                        <b name="submitRegistration" class='btn' data-bs-hover-animate='pulse' type='submit' style='color: #1c1c1c;background: #af6b58;'><strong>Submit</strong></b>
                     </div>
                 </div>
             </form>
