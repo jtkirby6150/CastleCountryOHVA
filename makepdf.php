@@ -23,7 +23,12 @@ $mpdf = new \Mpdf\Mpdf();
 
 $data = "";
 
-$data .= '<img src = "assets/img/logo-dark.png" width="100px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h1>Castle Country OHV Association</h1><img src = "assets/img/logo-dark.png" width="100px">';
+$data .= '<h1><img src = "assets/img/logo-dark.png" width="50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Castle Country OHV Association&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "assets/img/logo-dark.png" width="50px"></h1>';
+
+$data .='<br><strong>This a: </strong> ' . $member . ' <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Receive Newsletter via: </strong>' . $newsletter .'</br>';
+
+$data .='<strong>Name:</strong> ' . $firstname . ' ' . $lastname . ' <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email Address: </strong>' . $email .'</br>';
+
 
 
 $mpdf -> WriteHTML($data);
