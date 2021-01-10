@@ -54,6 +54,9 @@ if(isset($_GET['updateMember'])){
         $state = $row['state'];
         $zip = $row['zip'];
         $date = strtotime($row['date']);
+        if($date){
+            $date = date("m/d/Y", $date);
+        }
         $active = $row['active'];
         $notes = $row['notes'];
     }
@@ -264,7 +267,7 @@ if(isset($_POST['updateMemberInfo'])){
             <div class="form-row">
                 <div class="col">
                     <label for="dateOfActivation">Date of Activation</label>
-                    <input value="<?php echo date('m/d/Y', $date); ?>" class="form-control" type="text">
+                    <input value="<?php echo $date; ?>" class="form-control" type="text">
                 </div>
             </div>
             <div class="form-row">
