@@ -37,19 +37,18 @@ if(isset($_GET['updateMember'])){
         <form>
             <div class="form-row">
                 <div class="col"><label>Membership Type:</label>
-                <select class='form-control' name="membership">
-                    <?php
-                    if(isset($_GET['updateMember'])){
-                        echo "<option value='New Membership'>New Membership</option>
-                    <option value='Renewal' selected>Renewal Membership</option>";
-                    } else {
-                        echo "<option value=''>Pleae select an option</option>
-                        <option value='New Membership'>New Membership</option>
-                    <option value='Renewal' selected>Renewal Membership</option>";
-                    }
-                    ?>
-
-                </select>
+                    <select class='form-control' name="membership">
+                        <?php
+                        if(isset($_GET['updateMember'])){
+                            echo "<option value='New Membership'>New Membership</option>
+                        <option value='Renewal' selected>Renewal Membership</option>";
+                        } else {
+                            echo "<option value=''>Pleae select an option</option>
+                            <option value='New Membership'>New Membership</option>
+                        <option value='Renewal' selected>Renewal Membership</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="col"><label>Would live newsletters via:</label>
                     <select class='form-control' name='newsletter' id='newsletter'>
@@ -71,6 +70,7 @@ if(isset($_GET['updateMember'])){
                     ?>
 
                     </select>
+                </div>
             </div>
             <div class="form-row">
                 <div class="col"><label>Member 1 First Name</label><input class="form-control" type="text"></div>
