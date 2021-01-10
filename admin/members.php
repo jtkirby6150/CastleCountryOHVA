@@ -28,7 +28,7 @@ $reasonForDeactivation = "";
 $dateOfDeactivation = "";
 
 if(isset($_GET['updateMember'])){
-    $memberID = $_GET['updateMember'];
+    $memberID = escape($_GET['updateMember']);
     $getMemberInfo = query("SELECT * FROM members WHERE id = '$memberID'");
     confirm($getMemberInfo);
     while($row = fetch_array($getMemberInfo)){
@@ -47,20 +47,49 @@ if(isset($_GET['updateMember'])){
         $email1 = $row['email1'];
         $email2 = $row['email2'];
         $address = $row['address'];
-        $poBox = $row['poBox'];
+        $poBox = $row['pobox'];
         $city = $row['city'];
         $state = $row['state'];
         $zip = $row['zip'];
         $date = strtotime($row['date']);
-
     }
+}
+
+if($_POST['updateMemberInfo']){
+    $member = escape($_POST['member']);
+    $newsletter = escape($_POST['newsletter']);
+    $member1FN = escape($_POST['member1FN']);
+    $member1LN = escape($_POST['member1LN']);
+    $member2FN = escape($_POST['member2FN']);
+    $member2LN = escape($_POST['member2LN']);
+    $kid1 = escape($_POST['kid1']);
+    $kid2 = escape($_POST['kid2']);
+    $kid3 = escape($_POST['kid3']);
+    $kid4 = escape($_POST['kid4']);
+    $kid5 = escape($_POST['kid5']);
+    $phone = escape($_POST['phone']);
+    $email1 = escape($_POST['email1']);
+    $email2 = escape($_POST['email2']);
+    $address = escape($_POST['address']);
+    $poBox = escape($_POST['pobox']);
+    $city = escape($_POST['city']);
+    $state = escape($_POST['state']);
+    $zip = escape($_POST['zip']);
+    $date = escape($_POST['date']);
+
+    $updateMember = query("UPDATE members SET member = '$member', newsletter = '$newsletter', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', date = '$date'");
+    confirm($updateMember);
+    set_message("You have successfully updated member: <br>$member1FN $member1LN ", "success");
+    redirect("members.php?updateMember=$memberID");
+    exit();
 }
 
 
 ?>
     <div class="container">
+    <?php display_message(); ?>
         <h1 style="text-align: center;">Members</h1>
-        <form>
+        <form method="post">
             <div class="form-row">
                 <div class="col">
                     <label for="membership">Membership Type:</label>
@@ -186,23 +215,8 @@ if(isset($_GET['updateMember'])){
                 </div>
             </div>
             <div class="form-row">
-                <div class="col" style="text-align: center;margin: 15px;"><button class="btn btn-primary" type="button">Update Member Info</button></div>
+                <div class='col' style='text-align: center;margin: 15px;'>
+                    <button value="updateMemberInfo" class='btn btn-primary' type='submit'>Update Member Info</button></div>
             </div>
         </form>
-        <div id="footer" style="margin-top: 25px;">
-            <div class="row">
-                <div class="col-md-6">
-                    <p style="font-size: 20px;">Copyright info</p>
-                </div>
-                <div class="col-md-6">
-                    <p style="font-size: 20px;">Visit us on&nbsp;&nbsp;<i class="fa fa-facebook-square" style="font-size: 24px;"></i>&nbsp;</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-</body>
-
-</html>
+<?php include "includes/footer.php";
