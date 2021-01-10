@@ -9,9 +9,34 @@ if(isset($_GET['printPDF'])) {
     confirm($getMemberInfo);
     while ($row = fetch_array($getMemberInfo)) {
         $member = $row['member'];
-        $newsletter = $row['newsletter'];
-        $firstname = $row['firstname'];
-        $lastname = $row['lastname'];
+        $newsletter1 = $row['newsletter1'];
+        $newsletter2 = $row['newsletter2'];
+        $member1 = $row['member1FN'] . " " . $row['member1LN'];
+        $member2 = $row['member2FN'] . " " . $row['member2LN'];
+        $kid1 = $row['kid1'];
+        $kid2 = $row['kid2'];
+        $kid3 = $row['kid3'];
+        $kid4 = $row['kid4'];
+        $kid5 = $row['kid5'];
+        $members = $member1;
+        if($member2){
+            $members = $members . ", " . $member2;
+        }
+        if($kid1){
+            $members = $members . ", " . $kid1;
+        }
+        if($kid2){
+            $members = $members . ", " . $kid2;
+        }
+        if($kid3){
+            $members = $members . ", " . $kid3;
+        }
+        if($kid4){
+            $members = $members . ", " . $kid4;
+        }
+        if($kid5){
+            $members = $members . ", " . $kid5;
+        }
         $phone = $row['phone'];
         $email = $row['email'];
         $address = $row['address'];
@@ -70,9 +95,9 @@ if(isset($_GET['printPDF'])) {
 
     $data .= '<h1><img src = "assets/img/logo-dark.png" width="50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Castle Country OHV Association&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "assets/img/logo-dark.png" width="50px"></h1>';
 
-    $data .= '<strong>This is a: </strong> ' . $member . ' <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Receive Newsletter via: </strong>' . $newsletter . '<br>';
+    $data .= '<strong>This is a: </strong> ' . $member . ' <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member 1 Newsletter Via: </strong>' . $newsletter1 . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member 2 Newsletter Via: </strong>' . $newsletter2 .'<br>';
 
-    $data .= '<strong>Name:</strong> ' . $firstname . ' ' . $lastname . ' <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email Address: </strong>' . $email . '<br>';
+    $data .= '<strong>Name:</strong> ' . $members . ' <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email Address: </strong>' . $email . '<br>';
 
     $data .= '<strong>Phone: </strong>' . $phone . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;P.O. Box: </strong>' . $pobox . '<br>';
 
