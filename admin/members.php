@@ -23,6 +23,7 @@ $city = "";
 $state = "";
 $zip = "";
 $date = "";
+$notes = "";
 $dateActivation = "";
 $reasonForDeactivation = "";
 $dateOfDeactivation = "";
@@ -53,6 +54,7 @@ if(isset($_GET['updateMember'])){
         $zip = $row['zip'];
         $date = strtotime($row['date']);
         $active = $row['active'];
+        $notes = $row['notes'];
     }
 }
 
@@ -239,6 +241,12 @@ if(isset($_POST['updateMemberInfo'])){
                 <div class="col">
                     <label for="dateOfActivation">Date of Activation</label>
                     <input value="<?php echo date('m/d/Y', $date); ?>" class="form-control" type="text">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="notes">Notes</label>
+                    <textarea class="form-control" name="notes" id="notes" cols="30" rows="10"><?php echo $notes; ?></textarea>
                 </div>
             </div>
             <div class="form-row">
