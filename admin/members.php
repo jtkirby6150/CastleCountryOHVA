@@ -34,7 +34,8 @@ if(isset($_GET['updateMember'])){
     confirm($getMemberInfo);
     while($row = fetch_array($getMemberInfo)){
         $member = $row['member'];
-        $newsletter = $row['newsletter'];
+        $newsletter1 = $row['newsletter1'];
+        $newsletter2 = $row['newsletter2'];
         $member1FN = $row['member1FN'];
         $member1LN = $row['member1LN'];
         $member2FN = $row['member2FN'];
@@ -60,7 +61,8 @@ if(isset($_GET['updateMember'])){
 
 if(isset($_POST['updateMemberInfo'])){
     $member = escape($_POST['membership']);
-    $newsletter = escape($_POST['newsletter']);
+    $newsletter1 = escape($_POST['newsletter']);
+    $newsletter2 = escape($_POST['newsletter']);
     $member1FN = escape($_POST['member1FN']);
     $member1LN = escape($_POST['member1LN']);
     $member2FN = escape($_POST['member2FN']);
@@ -82,7 +84,7 @@ if(isset($_POST['updateMemberInfo'])){
     $active = escape($_POST['active']);
     $notes = escape($_POST['notes']);
 
-    $updateMember = query("UPDATE members SET member = '$member', newsletter = '$newsletter', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date', notes = '$notes' WHERE id = '$memberID'");
+    $updateMember = query("UPDATE members SET member = '$member', newsletter1 = '$newsletter1', newsletter2 = '$newsletter2', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date', notes = '$notes' WHERE id = '$memberID'");
     confirm($updateMember);
     set_message("You have successfully updated member: $member1FN $member1LN", "success");
     redirect("members.php?updateMember=$memberID");
@@ -112,14 +114,35 @@ if(isset($_POST['updateMemberInfo'])){
                     </select>
                 </div>
                 <div class="col">
-                    <label for="newsletter">Would live newsletters via:</label>
-                    <select class='form-control' name='newsletter' id='newsletter'>
+                    <label for="newsletter1">Member 1 Newsletter Via:</label>
+                    <select class='form-control' name='newsletter1' id='newsletter1'>
                     <?php
                     if(isset($_GET['updateMember'])) {
-                        if ($newsletter == 'Mail') {
+                        if ($newsletter1 == 'Mail') {
                             echo "<option value='Email'>Email</option>
                         <option value='Mail' selected>Mail</option>";
-                        } elseif ($newsletter == 'Email') {
+                        } elseif ($newsletter1 == 'Email') {
+                            echo "<option value='Email' selected>Email</option>
+                        <option value='Mail' >Mail</option>";
+                        } else {
+                            echo "<option value='' selected>Please select an option</option>
+                        <option value='Email'>Email</option>
+                        <option value='Mail'>Mail</option>";
+                        }
+                    }
+                    ?>
+
+                    </select>
+                </div>
+                <div class="col">
+                    <label for="newsletter2">Member 2 Newsletter Via:</label>
+                    <select class='form-control' name='newsletter2' id='newsletter2'>
+                    <?php
+                    if(isset($_GET['updateMember'])) {
+                        if ($newsletter2 == 'Mail') {
+                            echo "<option value='Email'>Email</option>
+                        <option value='Mail' selected>Mail</option>";
+                        } elseif ($newsletter2 == 'Email') {
                             echo "<option value='Email' selected>Email</option>
                         <option value='Mail' >Mail</option>";
                         } else {
