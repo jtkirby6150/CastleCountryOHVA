@@ -11,6 +11,9 @@ if(isset($_GET['printPDF'])) {
         $member = $row['member'];
         $newsletter1 = $row['newsletter1'];
         $newsletter2 = $row['newsletter2'];
+        if($newsletter1 && !$newsletter2){
+            $newsletter2 = "Sharing Newsletter";
+        }
         $member1 = $row['member1FN'] . " " . $row['member1LN'];
         $member2 = $row['member2FN'] . " " . $row['member2LN'];
         $kid1 = $row['kid1'];
