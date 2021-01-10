@@ -163,7 +163,7 @@ if(isset($_GET['updateMember'])){
             <div class="form-row">
                 <div class="col">
                     <label for="dateOfActivation">Date of Activation</label>
-                    <input value="<?php echo date("m/d/Y",strtotime($date)); ?>" class="form-control" type="text">
+                    <input value="<?php echo date_format(strtotime($date),"m/d/Y"); ?>" class="form-control" type="text">
                 </div>
             </div>
             <div class="form-row">
