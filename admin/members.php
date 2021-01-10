@@ -52,6 +52,7 @@ if(isset($_GET['updateMember'])){
         $state = $row['state'];
         $zip = $row['zip'];
         $date = strtotime($row['date']);
+        $active = $row['active'];
     }
 }
 
@@ -76,17 +77,13 @@ if(isset($_POST['updateMemberInfo'])){
     $state = escape($_POST['state']);
     $zip = escape($_POST['zip']);
     $date = escape($_POST['date']);
+    $active = escape($_POST['active']);
 
-    $updateMember = query("UPDATE members SET member = '$member', newsletter = '$newsletter', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', date = '$date' WHERE id = '$memberID'");
+    $updateMember = query("UPDATE members SET member = '$member', newsletter = '$newsletter', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date' WHERE id = '$memberID'");
     confirm($updateMember);
     set_message("You have successfully updated member: $member1FN $member1LN", "success");
     redirect("members.php?updateMember=$memberID");
     exit();
-    if(!$updateMember) {
-        set_message("This is not working");
-        redirect("admin.php");
-        exit();
-    }
 }
 
 
@@ -132,6 +129,31 @@ if(isset($_POST['updateMemberInfo'])){
 
                     </select>
                 </div>
+                <div class="col">
+                    <label for="active">Active Application?</label>
+                    <select class='form-control' name='active' id='active'>
+                        <?php
+                        if(isset($_GET['updateMember'])) {
+                            if ($active == 'Active' || $active == 'active') {
+                                echo "<option value='Active' selected>Active</option>
+                        <option value='Inactive'>Inactive</option>";
+                            } elseif ($active == 'Inactive' || $active == "InActive" || $active == 'inactive') {
+                                echo "<option value='Inactive' selected>Inactive</option>
+                        <option value='Active' >Active</option>";
+                            } else {
+                                echo "<option value='' selected>Please select an option</option>
+                        <option value='Active'>Active</option>
+                        <option value='Inactive'>Inactive</option>";
+                            }
+                        }
+                        ?>
+
+                    </select>
+                </div>
+
+
+
+
             </div>
             <div class="form-row">
                 <div class="col">
@@ -221,7 +243,7 @@ if(isset($_POST['updateMemberInfo'])){
             </div>
             <div class="form-row">
                 <div class='col' style='text-align: center;margin: 15px;'>
-                    <button value="updateMemberInfo" class='btn btn-primary' type='submit'>Update Member Info</button></div>
+                    <button name="updateMemberInfo" class='btn btn-primary' type='submit'>Update Member Info</button></div>
             </div>
         </form>
 <?php include "includes/footer.php";
