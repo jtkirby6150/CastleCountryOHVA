@@ -100,7 +100,7 @@ if(!isset($_SESSION['username'])){
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $getActiveMembers = query("SELECT * FROM members WHERE active = 'Active' OR active = 'active'");
+                                        $getActiveMembers = query("SELECT * FROM members");
                                         confirm($getActiveMembers);
                                         while($row = fetch_array($getActiveMembers)){
                                             $member1 = $row['member1FN'] . " " . $row['member1LN'];
