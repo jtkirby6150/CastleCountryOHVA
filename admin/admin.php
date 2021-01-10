@@ -100,7 +100,7 @@ if(!isset($_SESSION['username'])){
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $getActiveMembers = query("SELECT * FROM members");
+                                        $getActiveMembers = query("SELECT * FROM members ORDER BY member1LN AND member1FN");
                                         confirm($getActiveMembers);
                                         while($row = fetch_array($getActiveMembers)){
                                             $member1 = $row['member1FN'] . " " . $row['member1LN'];
@@ -111,7 +111,7 @@ if(!isset($_SESSION['username'])){
                                             $kid4 = $row['kid4'];
                                             $kid5 = $row['kid5'];
                                             $members = $member1;
-                                            if($member2){
+                                            if($member2 && $member2 != ''){
                                                 $members .= ", " . $member2;
                                             }
                                             if($kid1 || $kid2 || $kid3 || $kid4 || $kid5) {
