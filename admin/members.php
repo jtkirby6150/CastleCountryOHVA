@@ -22,6 +22,7 @@ $poBox = "";
 $city = "";
 $state = "";
 $zip = "";
+$date = "";
 $dateActivation = "";
 $reasonForDeactivation = "";
 $dateOfDeactivation = "";
@@ -42,8 +43,9 @@ if(isset($_GET['updateMember'])){
         <h1 style="text-align: center;">Members</h1>
         <form>
             <div class="form-row">
-                <div class="col"><label>Membership Type:</label>
-                    <select class='form-control' name="membership">
+                <div class="col">
+                    <label for="membership">Membership Type:</label>
+                    <select class='form-control' id="membership" name="membership">
                         <?php
                         if(isset($_GET['updateMember'])){
                             echo "<option value='New Membership'>New Membership</option>
@@ -56,7 +58,8 @@ if(isset($_GET['updateMember'])){
                         ?>
                     </select>
                 </div>
-                <div class="col"><label>Would live newsletters via:</label>
+                <div class="col">
+                    <label for="newsletter">Would live newsletters via:</label>
                     <select class='form-control' name='newsletter' id='newsletter'>
                     <?php
                     if(isset($_GET['updateMember'])) {
@@ -67,7 +70,7 @@ if(isset($_GET['updateMember'])){
                             echo "<option value='Email' selected>Email</option>
                         <option value='Mail' >Mail</option>";
                         } else {
-                            echo "<option value=''>Please select an option</option>
+                            echo "<option value='' selected>Please select an option</option>
                         <option value='Email'>Email</option>
                         <option value='Mail'>Mail</option>";
                         }
@@ -78,36 +81,90 @@ if(isset($_GET['updateMember'])){
                 </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>Member 1 First Name</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Member 1 Last Name</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="member1FN">Member 1 First Name</label>
+                    <input value="<?php echo $member1FN ?>" value="$member1FN" name="member1FN" id="member1FN" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="member1LN">Member 1 Last Name</label>
+                    <input value="<?php echo $member1LN ?>" value="$member1LN" name="member1LN" id="member1LN" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>Member 2 First Name</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Member 2 Last Name</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="member2FN">Member 2 First Name</label>
+                    <input value="<?php echo $member2FN ?>" name="member2FN" id="member2FN" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="member2LN">Member 2 Last Name</label>
+                    <input value="<?php echo $member2LN ?>" name="member2LN" id="member2LN" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>Kid 1</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Kid 2</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Kid 3</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Kid 4</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Kid 5</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="kid1">Kid 1</label>
+                    <input value="<?php echo $kid1 ?>" name="kid1" id="kid1" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="kid2">Kid 2</label>
+                    <input value="<?php echo $kid2 ?>" name="kid2" id="kid2" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="kid3">Kid 3</label>
+                    <input value="<?php echo $kid3 ?>" name="kid3" id="kid3" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="kid4">Kid 4</label>
+                    <input value="<?php echo $kid4 ?>" name="kid4" id="kid4" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="kid5">Kid 5</label>
+                    <input value="<?php echo $kid5?>" name="kid5" id="kid5" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>Phone</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Email 1</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Email 2</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="phone">Phone</label>
+                    <input value="<?php echo $phone; ?>" name="phone" id="phone" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="email1">Email 1</label>
+                    <input value="<?php echo $email1; ?>" name="email1" id="email1" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="email2">Email 2</label>
+                    <input value="<?php echo $email2; ?>" name="email2" id="email2" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>Address</label><input class="form-control" type="text"></div>
-                <div class="col"><label>PO Box</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="address">Address</label>
+                    <input value="<?php echo $address; ?>" name="address" id="address" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="poBox">PO Box</label>
+                    <input value="<?php echo $poBox; ?>" name="poBox" id="poBox" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>City</label><input class="form-control" type="text"></div>
-                <div class="col"><label>State</label><input class="form-control" type="text"></div>
-                <div class="col"><label>Zip</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="city">City</label>
+                    <input value="<?php echo $city; ?>" name="city" id="city" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="state">State</label>
+                    <input value="<?php echo $state; ?>" name="state" id="state" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="zip">Zip</label>
+                    <input value="<?php echo $zip; ?>" name="zip" id="zip" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
-                <div class="col"><label>Date of Activation</label><input class="form-control" type="text"></div>
+                <div class="col">
+                    <label for="dateOfActivation">Date of Activation</label>
+                    <input value="<?php echo date("m/d/Y",strtotime($date)); ?>" class="form-control" type="text">
+                </div>
             </div>
             <div class="form-row">
                 <div class="col" style="text-align: center;margin: 15px;"><button class="btn btn-primary" type="button">Update Member Info</button></div>
