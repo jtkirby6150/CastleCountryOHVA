@@ -34,7 +34,25 @@ if(isset($_GET['updateMember'])){
     while($row = fetch_array($getMemberInfo)){
         $member = $row['member'];
         $newsletter = $row['newsletter'];
+        $member1FN = $row['member1FN'];
+        $member1LN = $row['member1LN'];
+        $member2FN = $row['member2FN'];
+        $member2LN = $row['member2LN'];
+        $kid1 = $row['kid1'];
+        $kid2 = $row['kid2'];
+        $kid3 = $row['kid3'];
+        $kid4 = $row['kid4'];
+        $kid5 = $row['kid5'];
+        $phone = $row['phone'];
+        $email1 = $row['email1'];
+        $email2 = $row['email2'];
+        $address = $row['address'];
+        $poBox = $row['poBox'];
+        $city = $row['city'];
+        $state = $row['state'];
+        $zip = $row['zip'];
         $date = strtotime($row['date']);
+
     }
 }
 
