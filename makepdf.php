@@ -40,6 +40,13 @@ if(isset($_GET['printPDF'])) {
         $phone = $row['phone'];
         $email1 = $row['email1'];
         $email2 = $row['email2'];
+        if(!$email1){
+            $email1 = "Not on file";
+        }
+        if(!$email2){
+            $email2 = "Not on file";
+        }
+
         $address = $row['address'];
         $pobox = $row['pobox'];
         $city = $row['city'];
@@ -96,7 +103,7 @@ if(isset($_GET['printPDF'])) {
 
     $data .= '<h1><img src = "assets/img/logo-dark.png" width="50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Castle Country OHV Association&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src = "assets/img/logo-dark.png" width="50px"></h1>';
 
-    $data .= '<strong>This is a: </strong> ' . $member . '<br> <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member 1 Newsletter Via: </strong>' . $newsletter1 . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member 2 Newsletter Via: </strong>' . $newsletter2;
+    $data .= '<strong>This is a: </strong> ' . $member . '<br> <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member 1 Newsletter Via: </strong>' . $newsletter1 . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member 2 Newsletter Via: </strong>' . $newsletter2 . '<br>';
 
     $data .= '<strong>Name:</strong> ' . $members . '<br> <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Member 1 Email: </strong>' . $email1 . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Member 2 Email: </strong>' . $email2 . '<br>';
 
