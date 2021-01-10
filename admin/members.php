@@ -71,7 +71,6 @@ if(isset($_GET['updateMember'])){
                     ?>
 
                     </select>
-                    <input class="form-control" type="text"></div>
             </div>
             <div class="form-row">
                 <div class="col"><label>Member 1 First Name</label><input class="form-control" type="text"></div>
