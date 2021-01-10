@@ -133,7 +133,9 @@ if(!isset($_SESSION['username'])){
                                                 }
                                             }
                                             $memberPhone = $row['phone'];
-                                            $email = $row['email'];
+                                            $email1 = $row['email1'];
+                                            $email2 = $row['email2'];
+                                            $emails = $email1 . "<br>" . $email2;
                                             $address = $row['address'];
                                             $poBox = $row['pobox'];
                                             $city = $row['city'];
@@ -149,7 +151,7 @@ if(!isset($_SESSION['username'])){
                                             echo "<tr>
                                                 <td>$members</td>
                                                 <td>$memberPhone</td>
-                                                <td>$email</td>
+                                                <td>$emails</td>
                                                 <td>$fullAddress</td>
                                                 <td style='text-align: center;'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i>
                                                     <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i></td>
