@@ -199,15 +199,18 @@ if(isset($_POST['updateMemberInfo'])){
                             if ($newsletter2 == 'Mail') {
                                 echo "<option value='Email'>Email</option>
                         <option value='Mail' selected>Mail</option>
-                        <option value='Both'>Both</option>";
+                        <option value='Both'>Both</option>
+                        <option value='Sharing'>Sharing</option>";
                             } elseif ($newsletter2 == 'Email') {
                                 echo "<option value='Email' selected>Email</option>
                         <option value='Mail' >Mail</option>
-                        <option value='Both'>Both</option>";
+                        <option value='Both'>Both</option>
+                        <option value='Sharing'>Sharing</option>";
                             } elseif ($newsletter2 == 'Both'){
                                 echo "<option value='Both' selected>Both</option>
                                   <option value='Email'>Email</option>
-                        <option value='Mail' >Mail</option>";
+                        <option value='Mail' >Mail</option>
+                        <option value='Sharing'>Sharing</option>";
                             } else {
                                 echo "<option value='Sharing' selected>Sharing</option>
                         <option value='Email'>Email</option>
