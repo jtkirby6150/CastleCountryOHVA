@@ -55,8 +55,8 @@ if(isset($_GET['updateMember'])){
     }
 }
 
-if($_POST['updateMemberInfo']){
-    $member = escape($_POST['member']);
+if(isset($_POST['updateMemberInfo'])){
+    $member = escape($_POST['membership']);
     $newsletter = escape($_POST['newsletter']);
     $member1FN = escape($_POST['member1FN']);
     $member1LN = escape($_POST['member1LN']);
@@ -77,11 +77,16 @@ if($_POST['updateMemberInfo']){
     $zip = escape($_POST['zip']);
     $date = escape($_POST['date']);
 
-    $updateMember = query("UPDATE members SET member = '$member', newsletter = '$newsletter', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', date = '$date'");
+    $updateMember = query("UPDATE members SET member = '$member', newsletter = '$newsletter', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', date = '$date' WHERE id = '$memberID'");
     confirm($updateMember);
-    set_message("You have successfully updated member: <br>$member1FN $member1LN ", "success");
+    set_message("You have successfully updated member: $member1FN $member1LN", "success");
     redirect("members.php?updateMember=$memberID");
     exit();
+    if(!$updateMember) {
+        set_message("This is not working");
+        redirect("admin.php");
+        exit();
+    }
 }
 
 
