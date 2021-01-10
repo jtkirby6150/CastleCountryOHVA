@@ -16,12 +16,12 @@ if(isset($_GET['activeStatus'])){
             redirect('admin.php');
             exit();
         } elseif ($active == 0) {
-            $makeActive = query("UPDATE members SET activew = 1 WHERE id = $memberID");
+            $makeActive = query("UPDATE members SET active = 1 WHERE id = $memberID");
             set_message("You have successfully set $memberName status to Active.", "success");
             redirect('admin.php');
             exit();
         } else {
-            $makeActive = query("UPDATE members SET activew = 1 WHERE id = $memberID");
+            $makeActive = query("UPDATE members SET active = 1 WHERE id = $memberID");
             set_message("You have successfully set $memberName status to Active.", "success");
             redirect('admin.php');
             exit();
