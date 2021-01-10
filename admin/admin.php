@@ -111,7 +111,7 @@ if(!isset($_SESSION['username'])){
                                             $kid4 = $row['kid4'];
                                             $kid5 = $row['kid5'];
                                             $members = $member1;
-                                            if($member2 && $member2 != ''){
+                                            if($row['member2FN']){
                                                 $members .= ", " . $member2;
                                             }
                                             if($kid1 || $kid2 || $kid3 || $kid4 || $kid5) {
