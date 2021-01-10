@@ -20,6 +20,17 @@ if(isset($_POST['submitRegistration'])){
     $signature = escape($_POST['signature']);
     $date = escape($_POST['date']);
 
+    //Help Array:
+    $helpList = array();
+    $hlist = $_POST['help'];
+    if ($hlist) {
+        $helpList = '';
+        foreach ($hlist as $value) {
+            $helpList .= $value . ", ";
+        }
+        $helpList = rtrim($helpList, ", ");
+    }
+
 //    $addMember = query("INSERT INTO members (member, newsletter, name, phone, emial, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter', '$name', '$phone', '$email', '$address', '$pobox', '$city', '$state', '$zip', '$help', '$accept', '$signature', '$date', 0)");
 //    confirm($addMember);
 //    set_message("YOU GOT IT");
@@ -114,7 +125,7 @@ if(isset($_POST['submitRegistration'])){
                 </div>
                 <p class="text-center"><br><strong>*<span style="text-decoration: underline;">No Alcohol Policy</span> on all Club Sponsored Rides and Events. “Drinking Alcohol while driving an Off&nbsp;Highway Vehicle (OHV) is against the Law.” Each Member is expected to portray a safe and responsible&nbsp;attitude while riding OHV’s and to respect the environment around us.</strong><br><br></p>
                 <h4 class="text-center">STATEMENT OF LIMITED LIABILITY</h4>
-                <p>The Castle Country Off Highway Vehicle Association assumes no responsibility or liability for any loss, damage, or&nbsp;injury or death to any person or property in connection with your participation in any ATV ride. Your presence and&nbsp;participation in rides indicates knowledge of, and assumption of, the resulting risks involved. All participants are, therefore,&nbsp;urged to be sure that they use proper riding gear, are in satisfactory physical condition, and to secure prior to the ride,&nbsp;appropriate medical and personal injury and property damage insurance coverage. A parent or legal guardian must accompany<br>juveniles. Utah State law requires that operators of ATV’s must be 8 years of age or older. Operators between 8 and 16 years of&nbsp;age must be State certified in order to ride on Public lands.&nbsp;<br></p>
+                <p>The Castle Country Off Highway Vehicle Association assumes no responsibility or liability for any loss, damage, or&nbsp;injury or death to any person or property in connection with your participation in any ATV ride. Your presence and&nbsp;participation in rides indicates knowledge of, and assumption of, the resulting risks involved. All participants are, therefore,&nbsp;urged to be sure that they use proper riding gear, are in satisfactory physical condition, and to secure prior to the ride,&nbsp;appropriate medical and personal injury and property damage insurance coverage. A parent or legal guardian must accompany juveniles. Utah State law requires that operators of ATV’s must be 8 years of age or older. Operators between 8 and 16 years of&nbsp;age must be State certified in order to ride on Public lands.&nbsp;<br></p>
                 <p>I HAVE READ THE ABOVE INFORMATION ON RISK, RELEASE AND WAVER OF LIABILITY, HOLD-HARMLESS&nbsp;AND INDEMNITY AGREEMENT, FULLY UNDERSTAND ITS TERMS, UNDERSTAND THAT I MAY HAVE GIVEN&nbsp;UP SUBSTANTIAL RIGHTS BY SIGNING IT, AND HAVE SIGNED IT, ON BEHALF OF MYSELF AND MY MINOR&nbsp;CHILDREN, FREELY AND VOLUNTARILY WITHOUT ANY INDUCEMENT, ASSURANCE OR GUARANTEE BEING<br>MADE TO ME AND FULLY INTEND MY SIGNATURE TO BE A COMPLETE, CONTINUING AND&nbsp;UNCONDITIONAL RELEASE OF ALL LIABILITY TO THE FULLEST EXTENT ALLOWED BY LAW. IF I FAIL TO&nbsp;ABIDE BY THE ASSOCIATION BY-LAWS, I SHALL FORFEIT MY MEMBERSHIP AND DUES.&nbsp;<br></p>
                 <p><strong>By selecting "I&nbsp;Accept" using any device, means that you have read and understand the "STATEMENT OF LIMITED LIABILITY", our "No Alcohol Policy", and to practice safe OHV handling at all times. Furthermore you agree that your signature on this document (hereafter referred to as your "E-Signature") is as valid as if you signed the document in writing.&nbsp;</strong></p>
                 <div class="row">

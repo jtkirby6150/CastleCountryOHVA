@@ -37,7 +37,7 @@ if(isset($_GET['updateMember'])){
         <form>
             <div class="form-row">
                 <div class="col"><label>Membership Type:</label>
-                <select name="membership">
+                <select class='form-control' name="membership">
                     <?php
                     if(isset($_GET['updateMember'])){
                         echo "<option value='New Membership'>New Membership</option>
@@ -52,30 +52,25 @@ if(isset($_GET['updateMember'])){
                 </select>
                 </div>
                 <div class="col"><label>Would live newsletters via:</label>
+                    <select class='form-control' name='newsletter' id='newsletter'>
                     <?php
                     if(isset($_GET['updateMember'])){
                         if($newsletter == 'Mail'){
-                           echo "<select name='newsletter' id='newsletter'>
-                        <option value='Email'>Email</option>
-                        <option value='Mail' selected>Mail</option>
-                    </select>";
+                           echo "<option value='Email'>Email</option>
+                        <option value='Mail' selected>Mail</option>";
                         } else {
-                            echo "<select name='newsletter' id='newsletter'>
-                        <option value='Email' selected>Email</option>
-                        <option value='Mail' >Mail</option>
-                    </select>";
+                            echo "<option value='Email' selected>Email</option>
+                        <option value='Mail' >Mail</option>";
                         }
 
                     } else {
-                        echo "<select name='newsletter' id='newsletter'>
-                        <option value=''>Please select an option</option>
+                        echo "<option value=''>Please select an option</option>
                         <option value='Email'>Email</option>
-                        <option value='Mail'>Mail</option>
-                    </select>";
+                        <option value='Mail'>Mail</option>";
                     }
                     ?>
 
-
+                    </select>
                     <input class="form-control" type="text"></div>
             </div>
             <div class="form-row">

@@ -2,6 +2,7 @@
 include "mainincludes/init.php";
 include "mainincludes/header.php";
 include "mainincludes/nav.php";
+include "resources/functions.php";
 ?>
     <div class="container">
         <div class="row">
