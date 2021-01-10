@@ -34,6 +34,7 @@ if(isset($_GET['updateMember'])){
     while($row = fetch_array($getMemberInfo)){
         $member = $row['member'];
         $newsletter = $row['newsletter'];
+        $date = strtotime($row['date']);
     }
 }
 
@@ -163,7 +164,7 @@ if(isset($_GET['updateMember'])){
             <div class="form-row">
                 <div class="col">
                     <label for="dateOfActivation">Date of Activation</label>
-                    <input value="<?php echo date_format(strtotime($date),"m/d/Y"); ?>" class="form-control" type="text">
+                    <input value="<?php echo date('m/d/Y', $date); ?>" class="form-control" type="text">
                 </div>
             </div>
             <div class="form-row">
