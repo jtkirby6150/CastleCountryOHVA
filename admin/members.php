@@ -59,18 +59,19 @@ if(isset($_GET['updateMember'])){
                 <div class="col"><label>Would live newsletters via:</label>
                     <select class='form-control' name='newsletter' id='newsletter'>
                     <?php
-                    if(isset($_GET['updateMember'])){
-                        if($newsletter == 'Mail'){
-                           echo "<option value='Email'>Email</option>
+                    if(isset($_GET['updateMember'])) {
+                        if ($newsletter == 'Mail') {
+                            echo "<option value='Email'>Email</option>
                         <option value='Mail' selected>Mail</option>";
-                        } elseif($newsletter == 'Email') {
+                        } elseif ($newsletter == 'Email') {
                             echo "<option value='Email' selected>Email</option>
                         <option value='Mail' >Mail</option>";
                         } else {
-                        echo "<option value=''>Please select an option</option>
+                            echo "<option value=''>Please select an option</option>
                         <option value='Email'>Email</option>
                         <option value='Mail'>Mail</option>";
                         }
+                    }
                     ?>
 
                     </select>
