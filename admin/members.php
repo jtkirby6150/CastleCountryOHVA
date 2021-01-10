@@ -28,6 +28,12 @@ $dateOfDeactivation = "";
 
 if(isset($_GET['updateMember'])){
     $memberID = $_GET['updateMember'];
+    $getMemberInfo = query("SELECT * FROM members WHERE id = '$memberID'");
+    confirm($getMemberInfo);
+    while($row = fetch_array($getMemberInfo)){
+        $member = $row['member'];
+        $newsletter = $row['newsletter'];
+    }
 }
 
 
@@ -57,16 +63,14 @@ if(isset($_GET['updateMember'])){
                         if($newsletter == 'Mail'){
                            echo "<option value='Email'>Email</option>
                         <option value='Mail' selected>Mail</option>";
-                        } else {
+                        } elseif($newsletter == 'Email') {
                             echo "<option value='Email' selected>Email</option>
                         <option value='Mail' >Mail</option>";
-                        }
-
-                    } else {
+                        } else {
                         echo "<option value=''>Please select an option</option>
                         <option value='Email'>Email</option>
                         <option value='Mail'>Mail</option>";
-                    }
+                        }
                     ?>
 
                     </select>
