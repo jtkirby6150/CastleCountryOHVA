@@ -101,7 +101,7 @@ if(!isset($_SESSION['username'])){
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $getActiveMembers = query("SELECT * FROM members ORDER BY active AND member1LN");
+                                        $getActiveMembers = query("SELECT * FROM members WHERE active = 'Active' ORDER BY active AND member1LN");
                                         confirm($getActiveMembers);
                                         while($row = fetch_array($getActiveMembers)){
                                             $memberID = $row['id'];
@@ -182,17 +182,70 @@ if(!isset($_SESSION['username'])){
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>James Kirby</td>
-                                                <td>(435) 248-2888</td>
-                                                <td>kirby@castlecountryohv.com</td>
-                                                <td>PO Box 971<br>Ferron, Utah 84523</td>
-                                                <td style="text-align: center;"><i class="fa fa-pencil" style="font-size: 30px;color: var(--green);"></i><i class="fa fa-trash" style="margin-left: 15px;font-size: 30px;color: var(--red);"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                            </tr>
+                                        <?php
+                                        $getActiveMembers = query("SELECT * FROM members WHERE active = 'Inactive' ORDER BY active AND member1LN");
+                                        confirm($getActiveMembers);
+                                        while($row = fetch_array($getActiveMembers)){
+                                            $memberID = $row['id'];
+                                            $member1 = $row['member1LN'] . ", " . $row['member1FN'];
+                                            $member2 = $row['member2LN'] . ", " . $row['member2FN'];
+                                            $kid1 = $row['kid1'];
+                                            $kid2 = $row['kid2'];
+                                            $kid3 = $row['kid3'];
+                                            $kid4 = $row['kid4'];
+                                            $kid5 = $row['kid5'];
+                                            $members = $member1;
+                                            if($row['member2FN']){
+                                                $members .= "<br>" . $member2;
+                                            }
+                                            if($kid1 || $kid2 || $kid3 || $kid4 || $kid5) {
+                                                $members .= "<br>Kid(s):";
+                                                if ($kid1) {
+                                                    $members .= "<br>" . $kid1;
+                                                }
+                                                if ($kid2) {
+                                                    $members .= "<br>" . $kid2;
+                                                }
+                                                if ($kid3) {
+                                                    $members .= "<br>" . $kid3;
+                                                }
+                                                if ($kid4) {
+                                                    $members .= "<br>" . $kid4;
+                                                }
+                                                if ($kid5) {
+                                                    $members .= "<br>" . $kid5;
+                                                }
+                                            }
+                                            $memberPhone = $row['phone'];
+                                            $email1 = $row['email1'];
+                                            $email2 = $row['email2'];
+                                            $emails = $email1 . "<br>" . $email2;
+                                            $address = $row['address'];
+                                            $poBox = $row['pobox'];
+                                            $city = $row['city'];
+                                            $state = $row['state'];
+                                            $zip = $row['zip'];
+                                            $active = $row['active'];
+                                            $fullAddress = $address;
+                                            if($poBox){
+                                                $fullAddress .= "<br>" . $poBox;
+                                            }
+                                            $fullAddress .= "<br>" . $city . ", " . $state . " " . $zip;
+
+                                            echo "<tr>
+                                                <td>$members</td>
+                                                <td>$memberPhone</td>
+                                                <td>$emails</td>
+                                                <td>$fullAddress</td>
+                                                <td>$active</td>
+                                                <td style='text-align: center;'>
+                                                    <a href='members.php?updateMember=$memberID'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i></a>
+                                                    <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
+                                                    </td>
+                                            </tr>";
+                                        }
+                                        ?>
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -212,17 +265,69 @@ if(!isset($_SESSION['username'])){
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>James Kirby</td>
-                                                <td>(435) 248-2888</td>
-                                                <td>kirby@castlecountryohv.com</td>
-                                                <td>PO Box 971<br>Ferron, Utah 84523</td>
-                                                <td style="text-align: center;"><i class="fa fa-pencil" style="font-size: 30px;color: var(--green);"></i><i class="fa fa-trash" style="margin-left: 15px;font-size: 30px;color: var(--red);"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                            </tr>
+                                        <?php
+                                        $getActiveMembers = query("SELECT * FROM members ORDER BY active AND member1LN");
+                                        confirm($getActiveMembers);
+                                        while($row = fetch_array($getActiveMembers)){
+                                            $memberID = $row['id'];
+                                            $member1 = $row['member1LN'] . ", " . $row['member1FN'];
+                                            $member2 = $row['member2LN'] . ", " . $row['member2FN'];
+                                            $kid1 = $row['kid1'];
+                                            $kid2 = $row['kid2'];
+                                            $kid3 = $row['kid3'];
+                                            $kid4 = $row['kid4'];
+                                            $kid5 = $row['kid5'];
+                                            $members = $member1;
+                                            if($row['member2FN']){
+                                                $members .= "<br>" . $member2;
+                                            }
+                                            if($kid1 || $kid2 || $kid3 || $kid4 || $kid5) {
+                                                $members .= "<br>Kid(s):";
+                                                if ($kid1) {
+                                                    $members .= "<br>" . $kid1;
+                                                }
+                                                if ($kid2) {
+                                                    $members .= "<br>" . $kid2;
+                                                }
+                                                if ($kid3) {
+                                                    $members .= "<br>" . $kid3;
+                                                }
+                                                if ($kid4) {
+                                                    $members .= "<br>" . $kid4;
+                                                }
+                                                if ($kid5) {
+                                                    $members .= "<br>" . $kid5;
+                                                }
+                                            }
+                                            $memberPhone = $row['phone'];
+                                            $email1 = $row['email1'];
+                                            $email2 = $row['email2'];
+                                            $emails = $email1 . "<br>" . $email2;
+                                            $address = $row['address'];
+                                            $poBox = $row['pobox'];
+                                            $city = $row['city'];
+                                            $state = $row['state'];
+                                            $zip = $row['zip'];
+                                            $active = $row['active'];
+                                            $fullAddress = $address;
+                                            if($poBox){
+                                                $fullAddress .= "<br>" . $poBox;
+                                            }
+                                            $fullAddress .= "<br>" . $city . ", " . $state . " " . $zip;
+
+                                            echo "<tr>
+                                                <td>$members</td>
+                                                <td>$memberPhone</td>
+                                                <td>$emails</td>
+                                                <td>$fullAddress</td>
+                                                <td>$active</td>
+                                                <td style='text-align: center;'>
+                                                    <a href='members.php?updateMember=$memberID'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i></a>
+                                                    <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
+                                                    </td>
+                                            </tr>";
+                                        }
+                                        ?>
                                         </tbody>
                                     </table>
                                 </div>
