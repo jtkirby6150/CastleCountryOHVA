@@ -99,17 +99,63 @@ if(!isset($_SESSION['username'])){
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>James Kirby</td>
-                                                <td>(435) 248-2888</td>
-                                                <td>kirby@castlecountryohv.com</td>
-                                                <td>PO Box 971<br>Ferron, Utah 84523</td>
-                                                <td style="text-align: center;"><i class="fa fa-pencil" style="font-size: 30px;color: var(--green);"></i><i class="fa fa-trash" style="margin-left: 15px;font-size: 30px;color: var(--red);"></i></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Cell 3</td>
-                                                <td>Cell 4</td>
-                                            </tr>
+                                        <?php
+                                        $getActiveMembers = query("SELECT * FROM members WHERE active = 'Active' OR active = 'active'");
+                                        confirm($getActiveMembers);
+                                        while($row = fetch_array($getActiveMembers)){
+                                            $member1 = $row['member1FN'] . " " . $row['member1LN'];
+                                            $member2 = $row['member2FN'] . " " . $row['member2LN'];
+                                            $kid1 = $row['kid1'];
+                                            $kid2 = $row['kid2'];
+                                            $kid3 = $row['kid3'];
+                                            $kid4 = $row['kid4'];
+                                            $kid5 = $row['kid5'];
+                                            $members = $member1;
+                                            if($member2){
+                                                $members .= ", " . $member2;
+                                            }
+                                            if($kid1 || $kid2 || $kid3 || $kid4 || $kid5) {
+                                                $members .= "<br>Kid(s):";
+                                                if ($kid1) {
+                                                    $members .= "<br>" . $kid1;
+                                                }
+                                                if ($kid2) {
+                                                    $members .= "<br>" . $kid2;
+                                                }
+                                                if ($kid3) {
+                                                    $members .= "<br>" . $kid3;
+                                                }
+                                                if ($kid4) {
+                                                    $members .= "<br>" . $kid4;
+                                                }
+                                                if ($kid5) {
+                                                    $members .= "<br>" . $kid5;
+                                                }
+                                            }
+                                            $memberPhone = $row['phone'];
+                                            $email = $row['email'];
+                                            $address = $row['address'];
+                                            $poBox = $row['pobox'];
+                                            $city = $row['city'];
+                                            $state = $row['state'];
+                                            $zip = $row['zip'];
+                                            $active = $row['active'];
+                                            $fullAddress = $address;
+                                            if($poBox){
+                                                $fullAddress .= "<br>" . $poBox;
+                                            }
+                                            $fullAddress .= "<br>" . $city . ", " . $state . " " . $zip;
+
+                                            echo "<tr>
+                                                <td>$members</td>
+                                                <td>$memberPhone</td>
+                                                <td>$email</td>
+                                                <td>$fullAddress</td>
+                                                <td style='text-align: center;'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i>
+                                                    <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i></td>
+                                            </tr>";
+                                        }
+                                        ?>
                                         </tbody>
                                     </table>
                                 </div>
