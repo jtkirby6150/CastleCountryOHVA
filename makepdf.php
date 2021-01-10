@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
+include "mainincludes/init.php";
 
 if(isset($_GET['printPDF'])) {
     $memberID = $_GET['printPDF'];
