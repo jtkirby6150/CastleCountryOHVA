@@ -324,6 +324,8 @@ if(!isset($_SESSION['username'])){
                                                 <td style='text-align: center;'>
                                                     <a href='members.php?updateMember=$memberID'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i></a>
                                                     <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
+                                                    <br>
+                                                    <a href='../makepdf.php?downloadApplication' class='btn btn-info'>Download Application</a>
                                                     </td>
                                             </tr>";
                                         }
