@@ -209,7 +209,7 @@ if(isset($_POST['updateMemberInfo'])){
                                   <option value='Email'>Email</option>
                         <option value='Mail' >Mail</option>";
                             } else {
-                                echo "<option value='' selected>Please select an option</option>
+                                echo "<option value='Sharing' selected>Sharing</option>
                         <option value='Email'>Email</option>
                         <option value='Mail'>Mail</option>
                         <option value='Both'>Both</option>";
