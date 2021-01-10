@@ -95,12 +95,13 @@ if(!isset($_SESSION['username'])){
                                                 <th>Phone</th>
                                                 <th>Email</th>
                                                 <th>Address</th>
+                                                <th>Status</th>
                                                 <th>Edit / Delete</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $getActiveMembers = query("SELECT * FROM members ORDER BY member1LN");
+                                        $getActiveMembers = query("SELECT * FROM members ORDER BY status AND member1LN");
                                         confirm($getActiveMembers);
                                         while($row = fetch_array($getActiveMembers)){
                                             $memberID = $row['id'];
