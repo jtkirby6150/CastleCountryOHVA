@@ -157,9 +157,9 @@ if(!isset($_SESSION['username'])){
                                                 <td style='text-align: center;'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i>
                                                     <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
                                                     <br>";
-                                                    if($active = 1){
+                                                    if($active == 1){
                                                     echo "<a href='members.php?activeStatus=$memberID' class='btn btn-warning'>Set Inactive</a>";
-                                                    } else if($active = 0){
+                                                    } else if($active == 0){
                                                         echo "<a href='members.php?activeStatus=$memberID' class='btn btn-info'>Set Active</a>";
                                                     } else {
                                                         echo "<a href='members.php?activeStatus=$memberID' class='btn btn-warning'>Set Active</a>";
