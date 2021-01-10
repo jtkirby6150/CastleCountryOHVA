@@ -94,7 +94,7 @@ if(isset($_POST['updateMemberInfo'])){
     <div class="container">
     <?php display_message(); ?>
         <h1 style="text-align: center;">Members</h1>
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             <div class="form-row">
                 <div class="col">
                     <label for="membership">Membership Type:</label>
