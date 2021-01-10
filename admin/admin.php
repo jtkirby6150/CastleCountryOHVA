@@ -101,7 +101,7 @@ if(!isset($_SESSION['username'])){
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $getActiveMembers = query("SELECT * FROM members ORDER BY status AND member1LN");
+                                        $getActiveMembers = query("SELECT * FROM members ORDER BY active AND member1LN");
                                         confirm($getActiveMembers);
                                         while($row = fetch_array($getActiveMembers)){
                                             $memberID = $row['id'];
