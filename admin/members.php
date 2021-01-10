@@ -116,62 +116,8 @@ if(isset($_POST['updateMemberInfo'])){
                         ?>
                     </select>
                 </div>
-                <div class="col">
-                    <label for="newsletter1">Member 1 Newsletter Via:</label>
-                    <select class='form-control' name='newsletter1' id='newsletter1'>
-                    <?php
-                    if(isset($_GET['updateMember'])) {
-                        if ($newsletter1 == 'Mail') {
-                            echo "<option value='Email'>Email</option>
-                        <option value='Mail' selected>Mail</option>
-                        <option value='Both'>Both</option>";
-                        } elseif ($newsletter1 == 'Email') {
-                            echo "<option value='Email' selected>Email</option>
-                        <option value='Mail' >Mail</option>
-                        <option value='Both'>Both</option>";
-                        } elseif ($newsletter1 == 'Both'){
-                            echo "<option value='Both' selected>Both</option>
-                                  <option value='Email'>Email</option>
-                        <option value='Mail' >Mail</option>";
-                        } else {
-                            echo "<option value='' selected>Please select an option</option>
-                        <option value='Email'>Email</option>
-                        <option value='Mail'>Mail</option>
-                        <option value='Both'>Both</option>";
-                        }
-                    }
-                    ?>
 
-                    </select>
-                </div>
-                <div class="col">
-                    <label for="newsletter2">Member 2 Newsletter Via:</label>
-                    <select class='form-control' name='newsletter2' id='newsletter2'>
-                        <?php
-                        if(isset($_GET['updateMember'])) {
-                            if ($newsletter2 == 'Mail') {
-                                echo "<option value='Email'>Email</option>
-                        <option value='Mail' selected>Mail</option>
-                        <option value='Both'>Both</option>";
-                            } elseif ($newsletter2 == 'Email') {
-                                echo "<option value='Email' selected>Email</option>
-                        <option value='Mail' >Mail</option>
-                        <option value='Both'>Both</option>";
-                            } elseif ($newsletter2 == 'Both'){
-                                echo "<option value='Both' selected>Both</option>
-                                  <option value='Email'>Email</option>
-                        <option value='Mail' >Mail</option>";
-                            } else {
-                                echo "<option value='' selected>Please select an option</option>
-                        <option value='Email'>Email</option>
-                        <option value='Mail'>Mail</option>
-                        <option value='Both'>Both</option>";
-                            }
-                        }
-                        ?>
 
-                    </select>
-                </div>
                 <div class="col">
                     <label for="active">Active Application?</label>
                     <select class='form-control' name='active' id='active'>
@@ -207,6 +153,34 @@ if(isset($_POST['updateMemberInfo'])){
                     <label for="member1LN">Member 1 Last Name</label>
                     <input value="<?php echo $member1LN ?>" value="$member1LN" name="member1LN" id="member1LN" class="form-control" type="text">
                 </div>
+                <div class="col">
+                    <label for="newsletter1">Member 1 Newsletter Via:</label>
+                    <select class='form-control' name='newsletter1' id='newsletter1'>
+                        <?php
+                        if(isset($_GET['updateMember'])) {
+                            if ($newsletter1 == 'Mail') {
+                                echo "<option value='Email'>Email</option>
+                        <option value='Mail' selected>Mail</option>
+                        <option value='Both'>Both</option>";
+                            } elseif ($newsletter1 == 'Email') {
+                                echo "<option value='Email' selected>Email</option>
+                        <option value='Mail' >Mail</option>
+                        <option value='Both'>Both</option>";
+                            } elseif ($newsletter1 == 'Both'){
+                                echo "<option value='Both' selected>Both</option>
+                                  <option value='Email'>Email</option>
+                        <option value='Mail' >Mail</option>";
+                            } else {
+                                echo "<option value='' selected>Please select an option</option>
+                        <option value='Email'>Email</option>
+                        <option value='Mail'>Mail</option>
+                        <option value='Both'>Both</option>";
+                            }
+                        }
+                        ?>
+
+                    </select>
+                </div>
             </div>
             <div class="form-row">
                 <div class="col">
@@ -216,6 +190,34 @@ if(isset($_POST['updateMemberInfo'])){
                 <div class="col">
                     <label for="member2LN">Member 2 Last Name</label>
                     <input value="<?php echo $member2LN ?>" name="member2LN" id="member2LN" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="newsletter2">Member 2 Newsletter Via:</label>
+                    <select class='form-control' name='newsletter2' id='newsletter2'>
+                        <?php
+                        if(isset($_GET['updateMember'])) {
+                            if ($newsletter2 == 'Mail') {
+                                echo "<option value='Email'>Email</option>
+                        <option value='Mail' selected>Mail</option>
+                        <option value='Both'>Both</option>";
+                            } elseif ($newsletter2 == 'Email') {
+                                echo "<option value='Email' selected>Email</option>
+                        <option value='Mail' >Mail</option>
+                        <option value='Both'>Both</option>";
+                            } elseif ($newsletter2 == 'Both'){
+                                echo "<option value='Both' selected>Both</option>
+                                  <option value='Email'>Email</option>
+                        <option value='Mail' >Mail</option>";
+                            } else {
+                                echo "<option value='' selected>Please select an option</option>
+                        <option value='Email'>Email</option>
+                        <option value='Mail'>Mail</option>
+                        <option value='Both'>Both</option>";
+                            }
+                        }
+                        ?>
+
+                    </select>
                 </div>
             </div>
             <div class="form-row">
