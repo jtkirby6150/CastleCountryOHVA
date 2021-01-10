@@ -155,6 +155,7 @@ if(!isset($_SESSION['username'])){
                                                 <td>$memberPhone</td>
                                                 <td>$emails</td>
                                                 <td>$fullAddress</td>
+                                                <td>$active</td>
                                                 <td style='text-align: center;'>
                                                     <a href='members.php?updateMember=$memberID'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i></a>
                                                     <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
