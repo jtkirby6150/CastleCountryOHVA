@@ -2,28 +2,6 @@
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-if(isset($_GET['printPDF'])) {
-    $memberID = $_GET['printPDF'];
-    $getMemberInfo = query("SELECT * FROM members WHERE id = '$memberID'");
-    confirm($getMemberInfo);
-    while ($row = fetch_array($getMemberInfo)) {
-        $member = $row['member'];
-        $newsletter = $row['newsletter'];
-        $firstname = $row['firstname'];
-        $lastname = $row['lastname'];
-        $phone = $row['phone'];
-        $email = $row['email'];
-        $address = $row['address'];
-        $pobox = $row['pobox'];
-        $city = $row['city'];
-        $state = $row['state'];
-        $zip = $row['zip'];
-        $help = $row['help'];
-        $accept = $row['accept'];
-        $signature = $row['signature'];
-        $date = $row['date'];
-    }
-} else {
 
 //Grabbing variables from form:
     $member = $_POST['member'];
@@ -41,7 +19,7 @@ if(isset($_GET['printPDF'])) {
     $accept = $_POST['accept'];
     $signature = $_POST['signature'];
     $date = $_POST['date'];
-}
+
 
 //Help Array:
     $helpList = array();
