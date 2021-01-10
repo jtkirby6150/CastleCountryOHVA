@@ -64,8 +64,8 @@ if(isset($_GET['updateMember'])){
 
 if(isset($_POST['updateMemberInfo'])){
     $member = escape($_POST['membership']);
-    $newsletter1 = escape($_POST['newsletter']);
-    $newsletter2 = escape($_POST['newsletter']);
+    $newsletter1 = escape($_POST['newsletter1']);
+    $newsletter2 = escape($_POST['newsletter2']);
     $member1FN = escape($_POST['member1FN']);
     $member1LN = escape($_POST['member1LN']);
     $member2FN = escape($_POST['member2FN']);
@@ -123,14 +123,21 @@ if(isset($_POST['updateMemberInfo'])){
                     if(isset($_GET['updateMember'])) {
                         if ($newsletter1 == 'Mail') {
                             echo "<option value='Email'>Email</option>
-                        <option value='Mail' selected>Mail</option>";
+                        <option value='Mail' selected>Mail</option>
+                        <option value='Both' selected>Both</option>";
                         } elseif ($newsletter1 == 'Email') {
                             echo "<option value='Email' selected>Email</option>
+                        <option value='Mail' >Mail</option>
+                        <option value='Both' selected>Both</option>";
+                        } elseif ($newsletter == 'Both'){
+                            echo "<option value='Both' selected>Both</option>
+                                  <option value='Email' selected>Email</option>
                         <option value='Mail' >Mail</option>";
                         } else {
                             echo "<option value='' selected>Please select an option</option>
                         <option value='Email'>Email</option>
-                        <option value='Mail'>Mail</option>";
+                        <option value='Mail'>Mail</option>
+                        <option value='Both' selected>Both</option>";
                         }
                     }
                     ?>

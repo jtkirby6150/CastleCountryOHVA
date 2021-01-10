@@ -355,7 +355,7 @@ if(!isset($_SESSION['username'])){
                                                     <p>TITLE OF PRODUCT</p><img src="/assets/img/122532219_3394763900749660_2608346714282335828_n.jpg" style="height: 200px;">
                                                 </td>
                                                 <td>
-                                                    <p>fdjsakj; df js;kjdfs ai;jdfsaidfsjh dfjkasj;fda jfkdas;jf zksajdsz <br>fddfsaj fdkjkaj;fd ka;jfkj ;djfasjldjf ;fdjsa fdajsdfjkl;fdjsa</p>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque mollitia officiis repellendus sint tempora tempore! Accusamus aliquid earum in sit tenetur? Ab expedita illo ipsa labore nam nostrum reiciendis tempore.</p>
                                                 </td>
                                                 <td>
                                                     <p>10</p>
