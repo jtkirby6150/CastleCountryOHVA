@@ -101,7 +101,7 @@ if(isset($_POST['updateMemberInfo'])){
     }
 
 
-    $updateMember = query("UPDATE members SET member = '$member', newsletter1 = '$newsletter1', help = '$helpList', newsletter2 = '$newsletter2', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date', notes = '$notes' WHERE id = '$memberID'");
+    $updateMember = query("UPDATE members SET member = '$member', newsletter1 = '$newsletter1', help = '$helpList', newsletter2 = '$newsletter2', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone1 = '$phone1', phone2 = '$phone2', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date', notes = '$notes' WHERE id = '$memberID'");
     confirm($updateMember);
     set_message("You have successfully updated member: $member1FN $member1LN", "success");
     redirect("members.php?updateMember=$memberID");
