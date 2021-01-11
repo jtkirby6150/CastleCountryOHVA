@@ -309,6 +309,7 @@ if(!isset($_SESSION['username'])){
                                             $state = $row['state'];
                                             $zip = $row['zip'];
                                             $active = $row['active'];
+                                            $help = $row['help'];
                                             $fullAddress = $address;
                                             if($poBox){
                                                 $fullAddress .= "<br>" . $poBox;
@@ -318,7 +319,7 @@ if(!isset($_SESSION['username'])){
                                             echo "<tr>
                                                 <td>$members</td>
                                                 <td>$phones</td>
-                                                <td>$emails</td>
+                                                <td>$help</td>
                                                 <td>$fullAddress</td>
                                                 <td>$active</td>
                                                 <td style='text-align: center;'>
