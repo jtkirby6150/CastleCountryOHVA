@@ -61,6 +61,7 @@ if(isset($_GET['printPDF'])) {
         $date = $row['date'];
         $help = $row['help'];
 
+        echo $help;
         //Help Array:
         $helpList = array();
         $hlist = $_POST['help'];
