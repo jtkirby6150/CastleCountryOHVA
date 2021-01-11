@@ -90,11 +90,9 @@ $data .= '<strong>Address: </strong>' . $address . '<br>';
 
 $data .= '<strong>City: </strong>' . $city . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State: </strong>' . $state . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zip:</strong>' . $zip . '<br>';
 
-if($help) {
+
     $data .= '<br><strong>Would like to help with: </strong>' . $helpList;
-} else {
-    $data .= '<br><strong>Would like to help with: </strong>' . $helpList;
-}
+
 
 $data .= '<p><strong>Membership will cost $ 25.00 per year per household. This money will be used for newsletter, postage, club events and group membership to The BLUE RIBBON COALITION & The Utah ATV Association.</strong></p>';
 $data .= '<strong><u>*No Alcohol Policy</u> on all Club Sponsored Rides and Events. “Drinking Alcohol while driving an Off Highway Vehicle (OHV) is against the Law.” Each Member is expected to portray a safe and responsible attitude while riding OHV’s and to respect the environment around us.</strong>';
