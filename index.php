@@ -39,7 +39,7 @@ include "resources/functions.php";
                     <p style="line-height: 24px;">In unity there is strength! You can help make a difference and join a group of like minded OHV enthusiasts to promote and preserve motorized access in Utah!<br></p>
                     <h2>Join Us</h2>
                     <p style="line-height: 24px;"><a href="joinus.php">Join us</a> on club rides &amp; events. Meet &amp; Socialize with many great people. We also perform trail work &amp; maintenance to help keep our public lands clean and accessible.<br></p>
-                    <figure class="figure"><video class="figure-img" src="assets/img/DJI_0296.mp4" style="width: 640px;height: 420px;" controls>CCOHVA Video of Buck Master Area</video>
+                    <figure class="figure"><video class="figure-img" src="assets/img/DJI_0296.mp4" autoplay style="width: 640px;height: 420px;" controls>CCOHVA Video of Buck Master Area</video>
                         <figcaption class="figure-caption">White Wash Sand Dunes Recreation Area</figcaption>
                     </figure>
                     <p style="line-height: 24px;">This is White Wash Sand Dunes Recreation area. We do this ride annually, every October.</p>
