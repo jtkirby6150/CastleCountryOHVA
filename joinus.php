@@ -87,11 +87,11 @@ if(isset($_POST['submitRegistration'])){
                         </div>
                         <div class="col">
                             <div class="form-group">
-                                <label for="newsletter2">Member 1 Newsletter Via?</label><br>
+                                <label for="newsletter2">Member 2 Newsletter Via?</label><br>
                                 <select name="newsletter2" id="newsletter2" class="form-control">
                                     <option value="Email" selected>Email</option>
                                     <option value="Mail">Mail</option>
-                                    <option value="Both">Both</option>
+                                    <option value="Shared">Shared</option>
                                 </select>
                             </div>
                         </div>
