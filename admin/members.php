@@ -75,7 +75,8 @@ if(isset($_POST['updateMemberInfo'])){
     $kid3 = escape($_POST['kid3']);
     $kid4 = escape($_POST['kid4']);
     $kid5 = escape($_POST['kid5']);
-    $phone = escape($_POST['phone']);
+    $phone1 = escape($_POST['phone1']);
+    $phone2 = escape($_POST['phone2']);
     $email1 = escape($_POST['email1']);
     $email2 = escape($_POST['email2']);
     $address = escape($_POST['address']);
@@ -247,8 +248,12 @@ if(isset($_POST['updateMemberInfo'])){
             </div>
             <div class="form-row">
                 <div class="col">
-                    <label for="phone">Phone</label>
-                    <input value="<?php echo $phone; ?>" name="phone" id="phone" class="form-control" type="text">
+                    <label for="phone">Phone 1</label>
+                    <input value="<?php echo $phone1; ?>" name="phone1" id="phone1" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="phone">Phone 2</label>
+                    <input value="<?php echo $phone2; ?>" name="phone2" id="phone2" class="form-control" type="text">
                 </div>
                 <div class="col">
                     <label for="email1">Email 1</label>
