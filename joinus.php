@@ -3,7 +3,7 @@ include "mainincludes/header.php";
 include "mainincludes/init.php";
 include "mainincludes/nav.php";
 
-if(isset($_SERVER['submitRegistration'])){
+if(isset($_POST['submitRegistration'])){
     $member = escape($_POST['member']);
     $newsletter1 = escape($_POST['newsletter1']);
     $newsletter2 = escape($_POST['newsletter2']);
@@ -61,9 +61,7 @@ if(isset($_SERVER['submitRegistration'])){
     $addMember = query("INSERT INTO members (member, newsletter1, newsletter2, member1FN, member1LN, member2FN, member2LN, kid1, kid2, kid3, kid4, kid5, phone, email1, email2, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter1', '$newsletter2', '$member1FN', '$member1LN', '$member2FN', '$member2LN', '$kid1', '$kid2', '$kid3', '$kid4', '$kid5', '$phone', '$email1', '$email2', '$address', '$pobox', '$city', '$state', '$zip', '$helpList', '$accept', '$signature', '$date', 'Inactive')");
     confirm($addMember);
     set_message("You have successfully registered. Please keep an eye out for an email from us with further instructions.", "success");
-    if(!$addMember){
-        redirect("admin.php");
-    }
+    redirect("joinus.php");
     exit();
 }
 ?>
@@ -72,7 +70,7 @@ if(isset($_SERVER['submitRegistration'])){
         <?php display_message(); ?>
         <p style="text-align: center;" class='mb-5'>Please join us by filling out the this downloadable <a href="assets/2021-Membership-Application.pdf" download="">FORM</a> and sending it in.</p>
         <section id="mainForm" style="border: solid">
-            <form method="post" action="" class="p-4" enctype="multipart/form-data">
+            <form method="POST" class="p-4" enctype="multipart/form-data">
                 <div class="form-row">
                     <div class="col-md-4">
                         <div class="form-group">
