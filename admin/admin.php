@@ -107,7 +107,7 @@ if(!isset($_SESSION['username'])){
                                         </thead>
                                         <tbody>
                                         <?php
-                                        $getActiveMembers = query("SELECT * FROM members WHERE active = 'Active' ORDER BY active AND member1LN");
+                                        $getActiveMembers = query("SELECT * FROM members WHERE active = 'Active' ORDER BY member1LN");
                                         confirm($getActiveMembers);
                                         while($row = fetch_array($getActiveMembers)){
                                             $memberID = $row['id'];
@@ -178,7 +178,7 @@ if(!isset($_SESSION['username'])){
 
                             <div class="tab-pane" role="tabpanel" id="tab-10">
                                 <?php
-                                $getInactiveMembers = query("SELECT id FROM members WHERE active = 'Inactive'");
+                                $getInactiveMembers = query("SELECT id FROM members WHERE active = 'Inactive' ORDER BY member1LN");
                                 confirm($getInactiveMembers);
                                 $InactiveNum = row_count($getInactiveMembers);
                                 echo "<p>We currently have '$InactiveNum' Inactive Members!"

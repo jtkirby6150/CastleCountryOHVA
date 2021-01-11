@@ -89,7 +89,19 @@ if(isset($_POST['updateMemberInfo'])){
     $active = escape($_POST['active']);
     $notes = escape($_POST['notes']);
 
-    $updateMember = query("UPDATE members SET member = '$member', newsletter1 = '$newsletter1', newsletter2 = '$newsletter2', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date', notes = '$notes' WHERE id = '$memberID'");
+    //Help Array:
+    $helpList = array();
+    $hlist = $_POST['willHelp'];
+    if ($hlist) {
+        $helpList = '';
+        foreach ($hlist as $value) {
+            $helpList .= $value . ", ";
+        }
+        $helpList = rtrim($helpList, ", ");
+    }
+
+
+    $updateMember = query("UPDATE members SET member = '$member', newsletter1 = '$newsletter1', help = '$helpList', newsletter2 = '$newsletter2', member1FN = '$member1FN', member1LN = '$member1LN', member2FN = '$member2FN', member2LN = '$member2LN', kid1 = '$kid1', kid2 = '$kid2', kid3 = '$kid3', kid4 = '$kid4', kid5 = '$kid5', phone = '$phone', email1 = '$email1', email2 = '$email2', address = '$address', city = '$city', state = '$state', zip = '$zip', active = '$active', date = '$date', notes = '$notes' WHERE id = '$memberID'");
     confirm($updateMember);
     set_message("You have successfully updated member: $member1FN $member1LN", "success");
     redirect("members.php?updateMember=$memberID");
@@ -293,6 +305,18 @@ if(isset($_POST['updateMemberInfo'])){
                 <div class="col">
                     <label for="dateOfActivation">Date of Activation</label>
                     <input value="<?php echo $date; ?>" class="form-control" type="text">
+                </div>
+                <div class="col">
+                    <label for="willHelp">Would like to help with:</label>
+                    <select name="willHelp" id="willHelp" multiple class="form-control">
+                        <option value="Lead a club ride">Lead a club ride</option>
+                        <option value="Suggest a place to ride">Suggest a place to ride</option>
+                        <option value="Become a Board Member">Become a Board Member</option>
+                        <option value="Help with club event(s)">Help with club event(s)</option>
+                        <option value="Suggest a club event">Suggest a club event</option>
+                        <option value="Nominate a Member">Nominate a Member</option>
+                        <option value="Assist on committee">Assist on committee</option>
+                    </select>
                 </div>
             </div>
             <div class="form-row">
