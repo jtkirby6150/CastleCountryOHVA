@@ -1,7 +1,7 @@
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
-include "mainincludes/init.php";
+include "../mainincludes/init.php";
 $mpdf = new \Mpdf\Mpdf(['debug' => true]);
 
 if(isset($_GET['printPDF'])) {
