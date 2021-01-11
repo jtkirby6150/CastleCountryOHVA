@@ -81,7 +81,7 @@ if(isset($_POST['updateMemberInfo'])){
     $email1 = escape($_POST['email1']);
     $email2 = escape($_POST['email2']);
     $address = escape($_POST['address']);
-    $poBox = escape($_POST['pobox']);
+    $poBox = escape($_POST['poBox']);
     $city = escape($_POST['city']);
     $state = escape($_POST['state']);
     $zip = escape($_POST['zip']);
@@ -303,8 +303,8 @@ if(isset($_POST['updateMemberInfo'])){
             </div>
             <div class="form-row">
                 <div class="col">
-                    <label for="dateOfActivation">Date of Activation</label>
-                    <input value="<?php echo $date; ?>" class="form-control" type="text">
+                    <label for="date">Date of Activation</label>
+                    <input name="date" id="date" value="<?php echo $date; ?>" class="form-control" type="text">
                 </div>
                 <div class="col">
                     <label for="willHelp">Would like to help with:</label>
