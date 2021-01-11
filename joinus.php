@@ -61,7 +61,8 @@ if(isset($_SERVER['submitRegistration'])){
 
     $addMember = query("INSERT INTO members (member, newsletter1, newsletter2, member1FN, member1LN, member2FN, member2LN, kid1, kid2, kid3, kid4, kid5, phone, email1, email2, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter1', '$newsletter2', '$member1FN', '$member1LN', '$member2FN', '$member2LN', '$kid1', '$kid2', '$kid3', '$kid4', '$kid5', '$phone', '$email1', '$email2', '$address', '$pobox', '$city', '$state', '$zip', '$helpList', '$accept', '$signature', '$date', 0)");
     confirm($addMember);
-    redirect("makepdf.php");
+    set_message("You have successfully registered. Please keep an eye out for an email from us with further instructions.");
+    redirect("joinus.php");
     exit();
 }
 ?>
