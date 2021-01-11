@@ -177,7 +177,12 @@ if(!isset($_SESSION['username'])){
                             </div>
 
                             <div class="tab-pane" role="tabpanel" id="tab-10">
-                                <p>Content for tab 10.</p>
+                                <?php
+                                $getInactiveMembers = query("SELECT id FROM members WHERE active = 'Inactive'");
+                                confirm($getInactiveMembers);
+                                $InactiveNum = row_count($getInactiveMembers);
+                                echo "<p>We currently have '$InactiveNum' Inactive Members!"
+                                ?>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
@@ -262,7 +267,12 @@ if(!isset($_SESSION['username'])){
                             </div>
 
                             <div class="tab-pane" role="tabpanel" id="tab-11">
-                                <p>Content for tab 11.</p>
+                                <?php
+                                $getTotalMembers = query("SELECT id FROM members");
+                                confirm($getTotalMembers);
+                                $totalNum = row_count($getTotalMembers);
+                                echo "<p>We currently have '$totalNum' Total Active & Inactive Members!"
+                                ?>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
