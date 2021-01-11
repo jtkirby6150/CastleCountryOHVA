@@ -48,7 +48,7 @@ if(isset($_POST['submitRegistration'])){
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="member">Membership Type:</label>
-                            <select name="member" id="member">
+                            <select name="member" id="member" class="form-control">
                                 <option value="New Membership">New Membership</option>
                                 <option value="Renewal Membership">Renewal Membership</option>
                             </select>
@@ -67,7 +67,7 @@ if(isset($_POST['submitRegistration'])){
                         <div class="col">
                             <div class="form-group">
                                 <label for="newsletter1">Member 1 Newsletter Via?</label><br>
-                                <select name="newsletter1" id="newsletter1">
+                                <select name="newsletter1" id="newsletter1" class="form-control">
                                     <option value="Email" selected>Email</option>
                                     <option value="Mail">Mail</option>
                                     <option value="Both">Both</option>
@@ -88,7 +88,7 @@ if(isset($_POST['submitRegistration'])){
                         <div class="col">
                             <div class="form-group">
                                 <label for="newsletter2">Member 1 Newsletter Via?</label><br>
-                                <select name="newsletter2" id="newsletter2">
+                                <select name="newsletter2" id="newsletter2" class="form-control">
                                     <option value="Email" selected>Email</option>
                                     <option value="Mail">Mail</option>
                                     <option value="Both">Both</option>
