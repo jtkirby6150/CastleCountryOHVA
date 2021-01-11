@@ -62,7 +62,6 @@ if(isset($_POST['submitRegistration'])){
     confirm($addMember);
     set_message("You have successfully registered. Please keep an eye out for an email from us with further instructions.", "success");
     redirect("makepdf.php");
-    exit();
 }
 ?>
     <div class="container">
