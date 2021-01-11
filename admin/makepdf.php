@@ -64,7 +64,7 @@ if(isset($_GET['printPDF'])) {
 
     //Help Array:
     $helpList = array();
-    $hlist = $_POST['help'];
+    $hlist = $row['help'];
     if ($hlist) {
         $helpList = '';
         foreach ($hlist as $value) {
