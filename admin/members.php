@@ -52,6 +52,7 @@ if(isset($_GET['updateMember'])){
         $address = $row['address'];
         $poBox = $row['pobox'];
         $city = $row['city'];
+        $helpList = $row['help'];
         $state = $row['state'];
         $zip = $row['zip'];
         $date = strtotime($row['date']);
@@ -309,13 +310,18 @@ if(isset($_POST['updateMemberInfo'])){
                 <div class="col">
                     <label for="willHelp">Would like to help with:</label>
                     <select name="willHelp[]" id="willHelp" multiple class="form-control">
-                        <option value="Lead a club ride">Lead a club ride</option>
-                        <option value="Suggest a place to ride">Suggest a place to ride</option>
-                        <option value="Become a Board Member">Become a Board Member</option>
-                        <option value="Help with club event(s)">Help with club event(s)</option>
-                        <option value="Suggest a club event">Suggest a club event</option>
-                        <option value="Nominate a Member">Nominate a Member</option>
-                        <option value="Assist on committee">Assist on committee</option>
+                        <?php
+                        $getHelpOptions = query("SELECT * FROM helpOptions");
+                        while($row = fetch_array($getHelpOptions)){
+                            $name = $row['name'];
+                            $helpOptions = explode(", ", $helpList);
+                            if(in_array($name, $helpOptions)){
+                                echo "<option value='$name' selected>$name</option>";
+                            } else {
+                                echo "<option value='$name'>$name</option>";
+                            }
+                        }
+                        ?>
                     </select>
                 </div>
             </div>
