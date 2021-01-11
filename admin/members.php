@@ -45,7 +45,8 @@ if(isset($_GET['updateMember'])){
         $kid3 = $row['kid3'];
         $kid4 = $row['kid4'];
         $kid5 = $row['kid5'];
-        $phone = $row['phone'];
+        $phone1 = $row['phone1'];
+        $phone2 = $row['phone2'];
         $email1 = $row['email1'];
         $email2 = $row['email2'];
         $address = $row['address'];
