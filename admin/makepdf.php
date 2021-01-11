@@ -61,6 +61,17 @@ if(isset($_GET['printPDF'])) {
         $signature = $row['signature'];
         $date = $row['date'];
     }
+
+    //Help Array:
+    $helpList = array();
+    $hlist = $_POST['help'];
+    if ($hlist) {
+        $helpList = '';
+        foreach ($hlist as $value) {
+            $helpList .= $value . ", ";
+        }
+        $helpList = rtrim($helpList, ", ");
+    }
 }
 
 $mpdf = new \Mpdf\Mpdf();
@@ -80,7 +91,7 @@ $data .= '<strong>Address: </strong>' . $address . '<br>';
 $data .= '<strong>City: </strong>' . $city . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State: </strong>' . $state . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zip:</strong>' . $zip . '<br>';
 
 if($help) {
-    $data .= '<br><strong>Would like to help with: </strong>' . $help;
+    $data .= '<br><strong>Would like to help with: </strong>' . $helpList;
 } else {
     $data .= '<br><strong>Would like to help with: </strong>' . $helpList;
 }
