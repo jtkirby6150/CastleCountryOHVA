@@ -66,10 +66,41 @@ if(isset($_GET['printPDF'])) {
     $member = $_POST['member'];
     $newsletter1 = $_POST['newsletter1'];
     $newsletter2 = $_POST['newsletter2'];
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
+    $member1 = $_POST['member1FN'] . " " . $_POST['member1LN'];
+    $member2 = $_POST['member2FN'] . " " . $_POST['member2LN'];
+    $kid1 = $_POST['kid1'];
+    $kid2 = $_POST['kid2'];
+    $kid3 = $_POST['kid3'];
+    $kid4 = $_POST['kid4'];
+    $kid5 = $_POST['kid5'];
+    $members = $member1;
+    if($member2){
+        $members = $members . ", " . $member2;
+    }
+    if($kid1){
+        $members = $members . ", " . $kid1;
+    }
+    if($kid2){
+        $members = $members . ", " . $kid2;
+    }
+    if($kid3){
+        $members = $members . ", " . $kid3;
+    }
+    if($kid4){
+        $members = $members . ", " . $kid4;
+    }
+    if($kid5){
+        $members = $members . ", " . $kid5;
+    }
     $phone = $_POST['phone'];
-    $email = $_POST['email'];
+    $email1 = $_POST['email1'];
+    $email2 = $_POST['email2'];
+    if(!$email1){
+        $email1 = "Not on file";
+    }
+    if(!$email2){
+        $email2 = "Not on file";
+    }
     $address = $_POST['address'];
     $pobox = $_POST['pobox'];
     $city = $_POST['city'];
@@ -117,7 +148,11 @@ if(isset($_GET['printPDF'])) {
 
     $data .= '<strong>City: </strong>' . $city . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State: </strong>' . $state . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zip:</strong>' . $zip . '<br>';
 
-    $data .= '<br><strong>Would like to help with: </strong>' . $help;
+    if($help) {
+        $data .= '<br><strong>Would like to help with: </strong>' . $help;
+    } else {
+        $data .= '<br><strong>Would like to help with: </strong>' . $helpList;
+    }
 
     $data .= '<p><strong>Membership will cost $ 25.00 per year per household. This money will be used for newsletter, postage, club events and group membership to The BLUE RIBBON COALITION & The Utah ATV Association.</strong></p>';
     $data .= '<strong><u>*No Alcohol Policy</u> on all Club Sponsored Rides and Events. “Drinking Alcohol while driving an Off Highway Vehicle (OHV) is against the Law.” Each Member is expected to portray a safe and responsible attitude while riding OHV’s and to respect the environment around us.</strong>';
