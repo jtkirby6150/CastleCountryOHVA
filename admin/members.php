@@ -308,7 +308,7 @@ if(isset($_POST['updateMemberInfo'])){
                 </div>
                 <div class="col">
                     <label for="willHelp">Would like to help with:</label>
-                    <select name="willHelp" id="willHelp" multiple class="form-control">
+                    <select name="willHelp[]" id="willHelp" multiple class="form-control">
                         <option value="Lead a club ride">Lead a club ride</option>
                         <option value="Suggest a place to ride">Suggest a place to ride</option>
                         <option value="Become a Board Member">Become a Board Member</option>
