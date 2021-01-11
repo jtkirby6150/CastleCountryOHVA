@@ -3,64 +3,7 @@
 require_once __DIR__ . '/vendor/autoload.php';
 include "mainincludes/init.php";
 
-if(isset($_GET['printPDF'])) {
-    $memberID = $_GET['printPDF'];
-    $getMemberInfo = query("SELECT * FROM members WHERE id = '$memberID'");
-    confirm($getMemberInfo);
-    while ($row = fetch_array($getMemberInfo)) {
-        $member = $row['member'];
-        $newsletter1 = $row['newsletter1'];
-        $newsletter2 = $row['newsletter2'];
-        if($newsletter1 && !$newsletter2){
-            $newsletter2 = "Sharing Newsletter";
-        }
-        $member1 = $row['member1FN'] . " " . $row['member1LN'];
-        $member2 = $row['member2FN'] . " " . $row['member2LN'];
-        $kid1 = $row['kid1'];
-        $kid2 = $row['kid2'];
-        $kid3 = $row['kid3'];
-        $kid4 = $row['kid4'];
-        $kid5 = $row['kid5'];
-        $members = $member1;
-        if($member2){
-            $members = $members . ", " . $member2;
-        }
-        if($kid1){
-            $members = $members . ", " . $kid1;
-        }
-        if($kid2){
-            $members = $members . ", " . $kid2;
-        }
-        if($kid3){
-            $members = $members . ", " . $kid3;
-        }
-        if($kid4){
-            $members = $members . ", " . $kid4;
-        }
-        if($kid5){
-            $members = $members . ", " . $kid5;
-        }
-        $phone = $row['phone'];
-        $email1 = $row['email1'];
-        $email2 = $row['email2'];
-        if(!$email1){
-            $email1 = "Not on file";
-        }
-        if(!$email2){
-            $email2 = "Not on file";
-        }
 
-        $address = $row['address'];
-        $pobox = $row['pobox'];
-        $city = $row['city'];
-        $state = $row['state'];
-        $zip = $row['zip'];
-        $help = $row['help'];
-        $accept = $row['accept'];
-        $signature = $row['signature'];
-        $date = $row['date'];
-    }
-} else {
 
 //Grabbing variables from form:
     $member = $_POST['member'];
@@ -110,7 +53,7 @@ if(isset($_GET['printPDF'])) {
     $accept = $_POST['accept'];
     $signature = $_POST['signature'];
     $date = $_POST['date'];
-}
+
 
 //Help Array:
     $helpList = array();
