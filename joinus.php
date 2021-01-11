@@ -5,17 +5,45 @@ include "mainincludes/nav.php";
 
 if(isset($_POST['submitRegistration'])){
     $member = escape($_POST['member']);
-    $newsletter = escape($_POST['newsletter']);
-    $firstname = escape($_POST['firstname']);
-    $lastname = escape($_POST['lastname']);
+    $newsletter1 = escape($_POST['newsletter1']);
+    $newsletter2 = escape($_POST['newsletter2']);
+    $member1FN = escape($_POST['member1FN']);
+    $member1LN = escape($_POST['member1LN']);
+    $member2FN = escape($_POST['member2FN']);
+    $member2LN = escape($_POST['member2LN']);
+    $kid1 = escape($_POST['kid1']);
+    $kid2 = escape($_POST['kid2']);
+    $kid3 = escape($_POST['kid3']);
+    $kid4 = escape($_POST['kid4']);
+    $kid5 = escape($_POST['kid5']);
+    $members = $member1FN . " " . $member1LN;
+    if($member2FN){
+        $members .= $members . ", " . $member2FN . " " . $member2LN;
+    }
+    if($kid1){
+        $members .= $members . ", " . $kid1;
+    }
+    if($kid2){
+        $members .= $members . ", " . $kid2;
+    }
+    if($kid3){
+        $members .= $members . ", " . $kid3;
+    }
+    if($kid4){
+        $members .= $members . ", " . $kid4;
+    }
+    if($kid5){
+        $members .= $members . ", " . $kid5;
+    }
     $phone = escape($_POST['phone']);
-    $email = escape($_POST['email']);
+    $email1 = escape($_POST['email1']);
+    $email2 = escape($_POST['email2']);
     $address = escape($_POST['address']);
     $pobox = escape($_POST['pobox']);
     $city = escape($_POST['city']);
     $state = escape($_POST['state']);
     $zip = escape($_POST['zip']);
-    $help = escape($_POST['help']);
+    $helpArray = escape($_POST['help']);
     $accept = escape($_POST['accept']);
     $signature = escape($_POST['signature']);
     $date = escape($_POST['date']);
@@ -31,7 +59,7 @@ if(isset($_POST['submitRegistration'])){
         $helpList = rtrim($helpList, ", ");
     }
 
-//    $addMember = query("INSERT INTO members (member, newsletter, name, phone, emial, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter', '$name', '$phone', '$email', '$address', '$pobox', '$city', '$state', '$zip', '$help', '$accept', '$signature', '$date', 0)");
+//    $addMember = query("INSERT INTO members (member, newsletter, name, phone, emial, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter', '$name', '$phone', '$email', '$address', '$pobox', '$city', '$state', '$zip', '$helpArray', '$accept', '$signature', '$date', 0)");
 //    confirm($addMember);
 //    set_message("YOU GOT IT");
 //    redirect("joinus.php");
