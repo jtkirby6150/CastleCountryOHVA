@@ -79,14 +79,20 @@ if(!isset($_SESSION['username'])){
                     <div style="text-align: center;"><button class="btn" data-bs-hover-animate="pulse" type="button" style="background: #af6b58;border-color: rgba(242,239,234,0);color: #f2efea;">Add New</button></div>
                 <div>
                         <ul class="nav nav-tabs" role="tablist">
-                            <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-9" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Active</a></li>
-                            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-10" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Inactive</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-9" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Active Members</a></li>
+                            <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-10" style="border-style: solid;border-color: #556052;background: #af6b58;color: #f2efea;">Inactive Members</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-11" style="background: #af6b58;color: #f2efea;border-color: #556052;">All Members</a></li>
                             <li class="nav-item" role="presentation"><a class="nav-link" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-100" style="background: #af6b58;color: #f2efea;border-color: #556052;">Swag</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" role="tabpanel" id="tab-9">
-                                <p>Content for tab 9.</p>
+                                <?php
+                                $getActiveMembers = query("SELECT id FROM members WHERE active = 'Active'");
+                                confirm($getActiveMembers);
+                                $activeNum = row_count($getActiveMembers);
+                                echo "<p>We currently have '$activeNum' Active Members!"
+                                ?>
+                                <p></p>
                                 <div class="table-responsive">
                                     <table class="table">
                                         <thead>
