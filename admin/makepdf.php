@@ -60,6 +60,8 @@ if(isset($_GET['printPDF'])) {
         $signature = $row['signature'];
         $date = $row['date'];
         $help = $row['help'];
+
+        $help = explode(", ", $help, 0);
     }
 }
 
