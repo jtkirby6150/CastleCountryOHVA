@@ -61,16 +61,6 @@ if(isset($_GET['printPDF'])) {
         $date = $row['date'];
         $help = $row['help'];
 
-        //Help Array:
-        $helpList = array();
-        $hlist = $_POST['help'];
-        if ($hlist) {
-            $helpList = '';
-            foreach ($hlist as $value) {
-                $helpList .= $value . ", ";
-            }
-            $helpList = rtrim($helpList, ", ");
-        }
 
     }
 }
@@ -92,7 +82,7 @@ $data .= '<strong>Address: </strong>' . $address . '<br>';
 $data .= '<strong>City: </strong>' . $city . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State: </strong>' . $state . '<strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zip:</strong>' . $zip . '<br>';
 
 
-    $data .= '<br><strong>Would like to help with: </strong>' . $helpList;
+    $data .= '<br><strong>Would like to help with: </strong>' . $help;
 
 
 $data .= '<p><strong>Membership will cost $ 25.00 per year per household. This money will be used for newsletter, postage, club events and group membership to The BLUE RIBBON COALITION & The Utah ATV Association.</strong></p>';
