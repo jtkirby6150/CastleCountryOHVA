@@ -59,7 +59,7 @@ if(isset($_POST['submitRegistration'])){
         $helpList = rtrim($helpList, ", ");
     }
 
-    $addMember = query("INSERT INTO members (member, newsletter1, newsletter2, member1FN, member1LN, member2FN, member2LN, kid1, kid2, kid3, kid4, kid5, phone, email1, email2, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter1', '$newsletter2', '$member1FN', '$member1LN', '$member2FN', '$member2LN', '$kid1', '$kid2', '$kid3', '$kid4', '$kid5', '$phone', '$email1', '$email2', '$address', '$pobox', '$city', '$state', '$zip', '$helpArray', '$accept', '$signature', '$date', 0)");
+    $addMember = query("INSERT INTO members (member, newsletter1, newsletter2, member1FN, member1LN, member2FN, member2LN, kid1, kid2, kid3, kid4, kid5, phone, email1, email2, address, pobox, city, state, zip, help, accept, signature, date, active) VALUES ('$member', '$newsletter1', '$newsletter2', '$member1FN', '$member1LN', '$member2FN', '$member2LN', '$kid1', '$kid2', '$kid3', '$kid4', '$kid5', '$phone', '$email1', '$email2', '$address', '$pobox', '$city', '$state', '$zip', '$helpList', '$accept', '$signature', '$date', 0)");
     confirm($addMember);
     redirect("makepdf.php");
     exit();

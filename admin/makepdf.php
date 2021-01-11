@@ -60,6 +60,7 @@ if(isset($_GET['printPDF'])) {
         $accept = $row['accept'];
         $signature = $row['signature'];
         $date = $row['date'];
+        $row
     }
 
     //Help Array:
