@@ -114,5 +114,3 @@ $mpdf = new \Mpdf\Mpdf([
     'debug' => true,
     'allow_output_buffering' => true
 ]);
-
-redirect("joinus.php");
