@@ -95,7 +95,7 @@ if(isset($_POST['submitRegistration'])){
                         <div class="col">
                             <div class="form-group">
                                 <label for="newsletter1">Member 1 Newsletter Via?</label><br>
-                                <select name="newsletter1" id="newsletter1" class="form-control">
+                                <select name="newsletter1" id="newsletter1" class="form-control" required>
                                     <option value="Email" selected>Email</option>
                                     <option value="Mail">Mail</option>
                                     <option value="Both">Both</option>
@@ -108,10 +108,10 @@ if(isset($_POST['submitRegistration'])){
                     </div>
                     <div class="form-row">
                         <div class="col">
-                            <div class="form-group"><label>First Name:&nbsp;</label><input name="member2FN" tabindex="5" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>First Name:&nbsp;</label><input name="member2FN" tabindex="5" class="form-control" type="text"></div>
                         </div>
                         <div class="col">
-                            <div class="form-group"><label>Last Name: </label><input name="member2LN" tabindex="6" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Last Name: </label><input name="member2LN" tabindex="6" class="form-control" type="text"></div>
                         </div>
                         <div class="col">
                             <div class="form-group">
@@ -129,27 +129,27 @@ if(isset($_POST['submitRegistration'])){
                     </div>
                     <div class="row">
                         <div class="col">
-                            <div class="form-group"><label>Kid 1:</label><input name="kid1" tabindex="7" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Kid 1:</label><input name="kid1" tabindex="7" class="form-control" type="text"></div>
                         </div><div class="col">
-                            <div class="form-group"><label>Kid 2:</label><input name="kid2" tabindex="7" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Kid 2:</label><input name="kid2" tabindex="7" class="form-control" type="text"></div>
                         </div><div class="col">
-                            <div class="form-group"><label>Kid 3:</label><input name="kid3" tabindex="7" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Kid 3:</label><input name="kid3" tabindex="7" class="form-control" type="text"></div>
                         </div><div class="col">
-                            <div class="form-group"><label>Kid 4:</label><input name="kid4" tabindex="7" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Kid 4:</label><input name="kid4" tabindex="7" class="form-control" type="text"></div>
                         </div><div class="col">
-                            <div class="form-group"><label>Kid 5:</label><input name="kid5" tabindex="7" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Kid 5:</label><input name="kid5" tabindex="7" class="form-control" type="text"></div>
                         </div>
                     </div><div class="row">
                         <div class="col">
-                            <div class="form-group"><label>Phone:</label><input name="phone" tabindex="7" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Phone:</label><input name="phone" tabindex="7" class="form-control" type="text"></div>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="col">
-                            <div class="form-group"><label>Address:</label><input name="address" tabindex="9" class="form-control" type="text" required></div>
+                            <div class="form-group"><label>Address:</label><input name="address" tabindex="9" class="form-control" type="text"></div>
                         </div>
                         <div class="col">
-                            <div class="form-group"><label>P.O. Box:</label><input name="pobox" tabindex="10" class="form-control" type="text" ></div>
+                            <div class="form-group"><label>P.O. Box:</label><input name="pobox" tabindex="10" class="form-control" type="text"></div>
                         </div>
                     </div>
                     <div class="form-row">
