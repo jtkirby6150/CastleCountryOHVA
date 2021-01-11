@@ -172,3 +172,7 @@ MADE TO ME AND FULLY INTEND MY SIGNATURE TO BE A COMPLETE, CONTINUING AND UNCOND
     $content = $mpdf->Output('', 'S');
     $filename = 'CCOHVA_Registration_' . $member1 . '.pdf';
     $subject = 'CCOHVA Registration Submission';
+$mpdf = new \Mpdf\Mpdf([
+    'debug' => true,
+    'allow_output_buffering' => true
+]);
