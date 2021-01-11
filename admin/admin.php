@@ -134,7 +134,7 @@ if(!isset($_SESSION['username'])){
                                                     $members .= "<br>" . $kid5;
                                                 }
                                             }
-                                            $memberPhone = $row['phone'];
+                                            $phones = $row['phone1'] . "<br>" . $row['phone2'];
                                             $email1 = $row['email1'];
                                             $email2 = $row['email2'];
                                             $emails = $email1 . "<br>" . $email2;
@@ -152,7 +152,7 @@ if(!isset($_SESSION['username'])){
 
                                             echo "<tr>
                                                 <td>$members</td>
-                                                <td>$memberPhone</td>
+                                                <td>$phones</td>
                                                 <td>$emails</td>
                                                 <td>$fullAddress</td>
                                                 <td>$active</td>
@@ -216,7 +216,7 @@ if(!isset($_SESSION['username'])){
                                                     $members .= "<br>" . $kid5;
                                                 }
                                             }
-                                            $memberPhone = $row['phone'];
+                                            $phones = $row['phone1']. "<br>" . $row['phone2'];
                                             $email1 = $row['email1'];
                                             $email2 = $row['email2'];
                                             $emails = $email1 . "<br>" . $email2;
@@ -234,7 +234,7 @@ if(!isset($_SESSION['username'])){
 
                                             echo "<tr>
                                                 <td>$members</td>
-                                                <td>$memberPhone</td>
+                                                <td>$phones</td>
                                                 <td>$emails</td>
                                                 <td>$fullAddress</td>
                                                 <td>$active</td>
@@ -299,7 +299,7 @@ if(!isset($_SESSION['username'])){
                                                     $members .= "<br>" . $kid5;
                                                 }
                                             }
-                                            $memberPhone = $row['phone'];
+                                            $phones = $row['phone1']. "<br>" . $row['phone2'];
                                             $email1 = $row['email1'];
                                             $email2 = $row['email2'];
                                             $emails = $email1 . "<br>" . $email2;
@@ -317,7 +317,7 @@ if(!isset($_SESSION['username'])){
 
                                             echo "<tr>
                                                 <td>$members</td>
-                                                <td>$memberPhone</td>
+                                                <td>$phones</td>
                                                 <td>$emails</td>
                                                 <td>$fullAddress</td>
                                                 <td>$active</td>
