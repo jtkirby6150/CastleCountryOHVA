@@ -171,14 +171,3 @@ MADE TO ME AND FULLY INTEND MY SIGNATURE TO BE A COMPLETE, CONTINUING AND UNCOND
     $content = $mpdf->Output('', 'S');
     $filename = 'CCOHVA_Registration_' . $lastname . '.pdf';
     $subject = 'CCOHVA Registration Submission';
-
-
-
-    if($_GET['printPDF']){
-        redirect("admin/admin.php");
-        exit();
-    } else {
-        set_message("Thank you for your registration. We look forward to seeing you at the club events.", "success");
-        redirect("joinus.php");
-        exit();
-    }
