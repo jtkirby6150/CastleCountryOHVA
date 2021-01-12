@@ -149,6 +149,10 @@ if(isset($_POST['updateMemberInfo'])){
                         <option value='Active'>Active</option>
                         <option value='Inactive'>Inactive</option>";
                             }
+                        } else {
+                            echo "<option value='' selected>Please select an option</option>
+                        <option value='Active'>Active</option>
+                        <option value='Inactive'>Inactive</option>";
                         }
                         ?>
 
