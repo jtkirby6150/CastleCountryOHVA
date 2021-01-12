@@ -76,7 +76,7 @@ if(!isset($_SESSION['username'])){
             <div class="tab-content">
                 <div class="tab-pane active" role="tabpanel" id="tab-1">
                     <p>Here you will find a breakdown of members based on "Active", "Inactive", "All Members", "About to expire" status'.</p>
-                    <div style="text-align: center;"><a class="btn" href='members.php?updateMember=$memberID'>Add New Member</a></div>
+                    <div style="text-align: center;"><a class="btn btn-info" href='members.php'>Add New Member</a></div>
                 <div>
                         <ul class="nav nav-tabs" role="tablist">
                             <li class="nav-item" role="presentation"><a class="nav-link active" role="tab" data-toggle="tab" data-bs-hover-animate="pulse" href="#tab-9" style="color: #f2efea;background: #af6b58;border-style: solid;border-color: #556052;">Active Members</a></li>
