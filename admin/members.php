@@ -195,6 +195,11 @@ if(isset($_POST['updateMemberInfo'])){
                         <option value='Mail'>Mail</option>
                         <option value='Both'>Both</option>";
                             }
+                        } else {
+                            echo "<option value='' selected>Please select an option</option>
+                        <option value='Email'>Email</option>
+                        <option value='Mail'>Mail</option>
+                        <option value='Both'>Both</option>";
                         }
                         ?>
 
@@ -236,6 +241,11 @@ if(isset($_POST['updateMemberInfo'])){
                         <option value='Mail'>Mail</option>
                         <option value='Both'>Both</option>";
                             }
+                        } else {
+                            echo "<option value='Sharing' selected>Sharing</option>
+                        <option value='Email'>Email</option>
+                        <option value='Mail'>Mail</option>
+                        <option value='Both'>Both</option>";
                         }
                         ?>
 
