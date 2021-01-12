@@ -124,9 +124,9 @@ if(isset($_POST['updateMemberInfo'])){
                             echo "<option value='New Membership'>New Membership</option>
                         <option value='Renewal' selected>Renewal Membership</option>";
                         } else {
-                            echo "<option value=''>Pleae select an option</option>
+                            echo "<option value='' selected>Please select an option</option>
                             <option value='New Membership'>New Membership</option>
-                        <option value='Renewal' selected>Renewal Membership</option>";
+                        <option value='Renewal'>Renewal Membership</option>";
                         }
                         ?>
                     </select>
