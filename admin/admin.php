@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
                             <div class="text-white-75 small">Active Members</div>
                             <div class="text-lg font-weight-bold"><?php echo $activeNum; ?></div>
                         </div>
-                        <i class="fa-users text-white-50" data-feather="calendar"></i>
+                        <i class="fa-users"></i>
                     </div>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
