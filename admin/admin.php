@@ -293,7 +293,7 @@ if(!isset($_SESSION['username'])){
                                                 <td>$fullAddress</td>
                                                 <td>$active</td>
                                                 <td style='text-align: center;'>
-                                                    <a href='members.php?updateMember=$memberID'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i></a>
+                                                    <a href='members.php?updateMember=$memberID'><i class='fas fa-pencil-alt' style='font-size: 30px;color: var(--green);'></i></a>
                                                     <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
                                                     <br>
                                                     <a href='makepdf.php?printPDF=$memberID' class='btn btn-info'>Download Application</a>
@@ -384,7 +384,7 @@ if(!isset($_SESSION['username'])){
                                                 <td>$fullAddress</td>
                                                 <td>$active</td>
                                                 <td style='text-align: center;'>
-                                                    <a href='members.php?updateMember=$memberID'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);'></i></a>
+                                                    <a href='members.php?updateMember=$memberID'><i class='fas fa-pencil-alt' style='font-size: 30px;color: var(--green);'></i></a>
                                                     <i class='fa fa-trash' style='margin-left: 15px;font-size: 30px;color: var(--red);'></i>
                                                     <br>
                                                     <a href='makepdf.php?printPDF=$memberID' class='btn btn-info'>Download Application</a>
@@ -431,7 +431,7 @@ if(!isset($_SESSION['username'])){
                                                     <p>Active</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <p><i class="fa fa-pencil" style="font-size: 30px;color: var(--success);"></i><br><i class="fa fa-check" style="margin: 0 15px;font-size: 30px;color: var(--blue);"></i><br><i class="fa fa-remove" style="margin: 0 15px;font-size: 30px;color: rgb(235,142,33);"></i><br><i class="fa fa-trash" style="font-size: 30px;color: var(--danger);"></i></p>
+                                                    <p><i class="fas fa-pencil-alt" style="font-size: 30px;color: var(--success);"></i><br><i class="fa fa-check" style="margin: 0 15px;font-size: 30px;color: var(--blue);"></i><br><i class="fa fa-remove" style="margin: 0 15px;font-size: 30px;color: rgb(235,142,33);"></i><br><i class="fa fa-trash" style="font-size: 30px;color: var(--danger);"></i></p>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -683,7 +683,7 @@ if(!isset($_SESSION['username'])){
                                     <td>$boardtitle</td>
                                     <td>$description</td>
                                     <td class='text-center'>
-                                    <a href='addboardmember.php?edit=$id'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
+                                    <a href='addboardmember.php?edit=$id'><i class='fas fa-pencil-alt' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
                                     <a onclick='return checkDelete()' href='delete.php?deleteboardmember=$id'><i class='fa fa-trash' style='font-size: 30px;color: var(--red);'></i></a></td>
                                 </tr>";
                             }
@@ -707,7 +707,7 @@ if(!isset($_SESSION['username'])){
                             <tbody>
                                 <tr>
                                     <td>Castle Country OHV Association</td>
-                                    <td><input type="text">&nbsp; &nbsp;&nbsp;<i class="fa fa-pencil" style="font-size: 30px;color: var(--green);border-color: var(--gray-dark);"></i></td>
+                                    <td><input type="text">&nbsp; &nbsp;&nbsp;<i class="fas fa-pencil-alt" style="font-size: 30px;color: var(--green);border-color: var(--gray-dark);"></i></td>
                                 </tr>
                                 <tr>
                                     <td>Cell 3</td>
@@ -744,7 +744,7 @@ if(!isset($_SESSION['username'])){
                                     <td>$title<br><img width='150px' src='$dir/$image' alt=''></td>
                                     <td>$url</td>
                                     <td>$description</td>
-                                    <td><a href='partners.php?edit=$id'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
+                                    <td><a href='partners.php?edit=$id'><i class='fas fa-pencil-alt' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
                                     <a onclick='return checkDelete()' href='delete.php?deletepartner=$id'><i class='fa fa-trash' style='font-size: 30px;color: var(--red);'></i></a></td>
                                 </tr>";
                             }
@@ -781,7 +781,7 @@ if(!isset($_SESSION['username'])){
                                     <td>$title<br><img width='150px' src='$dir/$image' alt=''></td>
                                     <td>$url</td>
                                     <td>$description</td>
-                                    <td><a href='sponsors.php?edit=$id'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
+                                    <td><a href='sponsors.php?edit=$id'><i class='fas fa-pencil-alt' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
                                     <a onclick='return checkDelete()' href='delete.php?deletesponsor=$id'><i class='fa fa-trash' style='font-size: 30px;color: var(--red);'></i></a></td>
                                 </tr>";
                             }
@@ -816,7 +816,7 @@ if(!isset($_SESSION['username'])){
                                     <td>$title<br><img width='150px' src='$dir/$image' alt=''></td>
                                     <td>$url</td>
                                     <td>$description</td>
-                                    <td><a href='landmanagement.php?edit=$id'><i class='fa fa-pencil' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
+                                    <td><a href='landmanagement.php?edit=$id'><i class='fas fa-pencil-alt' style='font-size: 30px;color: var(--green);border-color: var(--gray-dark);'></i></a>
                                     <a onclick='return checkDelete()' href='delete.php?deletelandmanagement=$id'><i class='fa fa-trash' style='font-size: 30px;color: var(--red);'></i></a></td>
                                 </tr>";
                             }
