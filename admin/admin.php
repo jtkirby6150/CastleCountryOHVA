@@ -18,6 +18,31 @@ if(!isset($_SESSION['username'])){
     <div class="container">
         <h1>Welcome, Admin</h1>
         <?php display_message(); ?>
+
+        <?php
+        $getActiveMembers = query("SELECT id FROM members WHERE active = 'Active'");
+        confirm($getActiveMembers);
+        $activeNum = row_count($getActiveMembers);
+        ?>
+
+        <div class="col-xxl-3 col-lg-6">
+            <div class="card bg-primary text-white mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="mr-3">
+                            <div class="text-white-75 small">Active Members</div>
+                            <div class="text-lg font-weight-bold"><?php echo $activeNum; ?></div>
+                        </div>
+                        <i class="fas fa-users text-white-50" data-feather="calendar"></i>
+                    </div>
+                </div>
+                <div class="card-footer d-flex align-items-center justify-content-between">
+                    <a class="small text-white stretched-link" href="#">View Report</a>
+                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                </div>
+            </div>
+        </div>
+
         <div class="table-responsive" style="margin: 30px auto;">
 
             <table class="table">
