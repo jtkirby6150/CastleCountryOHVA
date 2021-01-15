@@ -19,6 +19,7 @@ if(!isset($_SESSION['username'])){
         <h1>Welcome, Admin</h1>
         <?php display_message(); ?>
 
+        <div class="row">
         <?php
         $getActiveMembers = query("SELECT id FROM members WHERE active = 'Active'");
         confirm($getActiveMembers);
@@ -46,7 +47,6 @@ if(!isset($_SESSION['username'])){
         $getInactiveMembers = query("SELECT id FROM members WHERE active = 'Inactive' ORDER BY member1LN");
         confirm($getInactiveMembers);
         $InactiveNum = row_count($getInactiveMembers);
-        echo "<p>We currently have '$InactiveNum' Inactive Members!"
         ?>
         <div class="col-xxl-3 col-lg-6">
             <div class="card bg-warning text-white mb-4">
@@ -64,6 +64,7 @@ if(!isset($_SESSION['username'])){
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
+        </div>
         </div>
         <div class="table-responsive" style="margin: 30px auto;">
 
