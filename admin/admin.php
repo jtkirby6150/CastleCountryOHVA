@@ -36,10 +36,6 @@ if(!isset($_SESSION['username'])){
                         <i class="fas fa-users-slash"></i>
                     </div>
                 </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#tab-9">View Active Members</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                </div>
             </div>
         </div>
 
@@ -58,10 +54,6 @@ if(!isset($_SESSION['username'])){
                         </div>
                         <i class="fas fa-users"></i>
                     </div>
-                </div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#tab-10">View Inactive Members</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
         </div>
