@@ -33,7 +33,7 @@ if(!isset($_SESSION['username'])){
                             <div class="text-white-75 small">Active Members</div>
                             <div class="text-lg font-weight-bold"><?php echo $activeNum; ?></div>
                         </div>
-                        <i class="fas fa-users-slash"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@ if(!isset($_SESSION['username'])){
                             <div class="text-white-75 small">InActive Members</div>
                             <div class="text-lg font-weight-bold"><?php echo $InactiveNum; ?></div>
                         </div>
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users-slash"></i>
                     </div>
                 </div>
             </div>
