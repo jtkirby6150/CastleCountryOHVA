@@ -24,6 +24,6 @@
     <link rel="stylesheet" href="../assets/css/News-Cards.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="icon" href="../assets/img/favicon.ico">
-    <script src="https://use.fontawesome.com/784c7bb7a0.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 </head>
 <body style="background: #f2efea;color: #556052;">
