@@ -33,11 +33,11 @@ if(!isset($_SESSION['username'])){
                             <div class="text-white-75 small">Active Members</div>
                             <div class="text-lg font-weight-bold"><?php echo $activeNum; ?></div>
                         </div>
-                        <i class="fa-users"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                 </div>
                 <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">View Report</a>
+                    <a class="small text-white stretched-link" href="#tab-9">View Report</a>
                     <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                 </div>
             </div>
