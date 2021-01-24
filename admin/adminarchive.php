@@ -181,6 +181,7 @@ if(isset($_POST['addArchive'])){
 
     $addArchive = query("INSERT INTO archives (title, date, location, gps, difficulty, duration, description, image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15) VALUES ('$title', '$date', '$location', '$gps', '$difficulty', '$duration', '$description', '$img1', '$img2', '$img3', '$img4', '$img5', '$img6', '$img7', '$img8', '$img9', '$img10', '$img11', '$img12', '$img13', '$img14', '$img15')");
     global $conn;
+    confirm($addArchive);
     $lastID = mysqli_insert_id($conn);
     $updateEvent = query("UPDATE events SET archive = 1 WHERE id = '$id'");
 
