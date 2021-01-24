@@ -43,7 +43,7 @@ if(isset($_GET['archive'])){
         $title = $eventRow['title'];
         $date = $eventRow['date'];
         $location = $eventRow['location'];
-        $gps = $eventRow['gps'];
+        $gps = clean($eventRow['gps']);
         $difficulty = $eventRow['difficulty'];
         $duration = $eventRow['duration'];
 
@@ -60,7 +60,7 @@ if(isset($_GET['updatearchive'])){
         $title = $archiveRow['title'];
         $date = $archiveRow['date'];
         $location = $archiveRow['location'];
-        $gps = clean($archiveRow['gps']);
+        $gps = $archiveRow['gps'];
         $difficulty = $archiveRow['difficulty'];
         $duration = $archiveRow['duration'];
         $description = $archiveRow['description'];
