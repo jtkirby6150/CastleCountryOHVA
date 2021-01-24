@@ -60,7 +60,7 @@ if(isset($_GET['updatearchive'])){
         $title = $archiveRow['title'];
         $date = $archiveRow['date'];
         $location = $archiveRow['location'];
-        $gps = escape($archiveRow['gps']);
+        $gps = htmlentities($archiveRow['gps']);
         $difficulty = $archiveRow['difficulty'];
         $duration = $archiveRow['duration'];
         $description = $archiveRow['description'];
