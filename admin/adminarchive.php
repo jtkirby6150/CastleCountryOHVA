@@ -40,12 +40,12 @@ if(isset($_GET['archive'])){
 
     $getEvent = query("SELECT * FROM events WHERE id = '$id'");
     while($eventRow = fetch_array($getEvent)){
-        $title = $eventRow['title'];
-        $date = $eventRow['date'];
-        $location = $eventRow['location'];
-        $gps = clean($eventRow['gps']);
-        $difficulty = $eventRow['difficulty'];
-        $duration = $eventRow['duration'];
+        $title = escape($eventRow['title']);
+        $date = escape($eventRow['date']);
+        $location = escape($eventRow['location']);
+        $gps = escape($eventRow['gps']);
+        $difficulty = escape($eventRow['difficulty']);
+        $duration = escape($eventRow['duration']);
 
 
     }
